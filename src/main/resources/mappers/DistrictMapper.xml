@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.huan.t_store.mapper.DistrictMapper">
+
+    <!-- 根据parent查询到省市区 -->
+    <!-- District findByParent(String parent); -->
+    <select id="findByParent" resultType="cn.huan.t_store.entity.District">
+        SELECT 
+        	* 
+        FROM 
+        	t_dict_district 
+        WHERE 
+        	parent=#{parent} 
+        ORDER BY 
+        	id
+    </select>
+    
+    <!-- 根据省市区代号查询名称 -->
+    <!-- select name t_dict_district where code=? -->
+    <select id="findNameByCode" resultType="java.lang.String">
+      SELECT 
+      	name 
+      FROM 
+     	 t_dict_district 
+      WHERE 
+     	 code=#{code}
+    </select>
+
+</mapper>
+
+
+
+
+

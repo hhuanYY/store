@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.huan.t_store.mapper.OrderMapper">
+
+	<!-- 订单插入 -->
+	<insert id="insertOrder" useGeneratedKeys="true" keyProperty="oid">
+		INSERT INTO t_order(
+			uid,recv_name,recv_phone,recv_province,
+		    recv_city,recv_area,recv_address,pay_amount,
+		    status,order_time ,pay_time ,created_user ,
+		    created_time ,modified_user ,modified_time 
+		) VALUES(
+			#{uid},#{recvName},#{recvPhone},#{recvProvince},
+		    #{recvCity},#{recvArea},#{recvAddress},#{payAmount},
+		    #{status},#{orderTime},#{payTime},#{createdUser},
+		    #{createdTime},#{modifiedUser},#{modifiedTime}
+		)
+	</insert>
+	
+	<!-- 订单商品插入 -->
+	<insert id="insertOrderItem" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO t_order_item(
+			oid,pid,title,image,
+			price,num,total_price,created_user,
+			created_time,modified_user,modified_time
+		) VALUES(
+			#{oid},#{pid},#{title},#{image},
+			#{price},#{num},#{totalPrice},#{createdUser},
+			#{createdTime},#{modifiedUser},#{modifiedTime}
+		)
+	</insert>
+
+</mapper>
+	
+
+
+

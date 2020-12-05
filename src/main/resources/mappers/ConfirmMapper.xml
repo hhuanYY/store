@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.huan.t_store.mapper.ConfirmMapper">
+
+	<resultMap type="cn.huan.t_store.entity.Address" id="AddEntityAddress">
+	 	<id column="aid" property="aid" />
+	 	<result column="province_name" property="provinceName"/>
+	 	<result column="province_code" property="provinceCode"/>
+	 	<result column="city_name" property="cityName"/>
+	 	<result column="city_code" property="cityCode"/>
+	 	<result column="area_name" property="areaName"/>
+	 	<result column="area_code" property="areaCode"/>
+	 	<result column="is_default" property="isDefault"/>
+	 	<result column="created_user" property="createdUser"/>
+	 	<result column="created_time" property="createdTime"/>
+	 	<result column="modified_user" property="modifiedUser"/>
+	 	<result column="modified_time" property="modifiedTime"/>
+	</resultMap>
+	 
+	<!-- 根据uid查询该用户的所有收货地址  --> 
+	<select id="findByUidAddress" resultMap="AddEntityAddress">
+		SELECT 
+			*
+		FROM 
+			t_address 
+		WHERE 
+			uid=#{uid}
+	</select>
+
+	<!-- 显示用户勾选的购物车商品 -->
+	<select id="findByCids" resultType="cn.huan.t_store.entity.CartVO">
+			SELECT 
+			cid,uid,pid,t_cart.num,
+			t_cart.price,title,image,t_product.price AS realPrice
+		FROM
+			t_cart LEFT JOIN t_product ON t_cart.pid=t_product.id 
+		WHERE 
+			uid=#{uid} AND cid IN(
+			<foreach collection="cid" item="cid" separator=",">
+				#{cid}
+			</foreach>
+			)
+		ORDER BY 
+			t_cart.created_time DESC 
+	</select>
+
+
+</mapper>
+
+
+

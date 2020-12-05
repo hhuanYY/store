@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--edge浏览器H5兼容设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--360浏览器H5兼容设置-->
+		<meta name="renderer" content="webkit" />
+		<title>优势者商城</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--导入核心文件-->
+		<script src="../bootstrap3/js/holder.js"></script>
+		<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+		<script src="../bootstrap3/js/bootstrap.js"></script>
+		<!-- 字体图标 -->
+		<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="header">
+			<!--学子商城logo-->
+			<div class="row">
+				<div class="col-md-3">
+					<a href="index.html">
+						<img src="../images/index/stumalllogo.png" />
+					</a>
+				</div>
+				<!--快捷选项-->
+				<div class="col-md-9 top-item">
+					<ul class="list-inline pull-right">
+						<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
+						<li class="li-split">|</li>
+						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+						<li class="li-split">|</li>
+						<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
+						<li class="li-split">|</li>
+						<li>
+							<!--下列列表按钮 ：管理-->
+							<div class="btn-group">
+								<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+									<span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;管理 <span class="caret"></span></span>
+								</button>
+								<ul class="dropdown-menu top-dropdown-ul" role="menu">
+									<li><a href="password.html">修改密码</a></li>
+									<li><a href="userdata.html">个人资料</a></li>
+									<li><a href="upload.html">上传头像</a></li>
+									<li><a href="address.html">收货管理	</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li-split">|</li>
+						<li><a href="login.html"><span class="fa fa-user"></span>&nbsp;登录</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!--导航 -->
+		<!--分割导航和顶部-->
+		<div class="row top-nav">
+			<div class="col-md-6">
+				<ul class="nav nav-pills">
+					<li>
+						<a href="#"></a>
+					</li>
+					<li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+					<li><a href="#">秒杀</a></li>
+					<li><a href="#">优惠券</a></li>
+					<li><a href="#">VIP</a></li>
+					<li><a href="#">外卖</a></li>
+					<li><a href="#">超市</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<form action="search.html" class="form-inline pull-right" role="form">
+					<div class="form-group">
+						<input type="text" class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索">
+					</div>
+					<button type="submit" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+				</form>
+			</div>
+		</div>
+		<!--头部结束-->
+		<!--导航结束-->
+		<div class="container">
+			<div class="col-md-2">
+				<!--左侧导航开始-->
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<!--主选项：我的订单-->
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的订单</a>
+							</p>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div><a href="orders.html">全部订单</a></div>
+								<div><a href="orders.html">待付款</a></div>
+								<div><a href="orders.html">待收货</a></div>
+								<div><a href="orders.html">待评价</a></div>
+								<div><a href="orders.html">退货退款</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<!--主选项：资料修改-->
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">资料修改</a>
+							</p>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div><a href="password.html">修改密码</a></div>
+								<div><a href="userdata.html"><b>个人资料</b></a></div>
+								<div><a href="upload.html">上传头像</a></div>
+								<div><a href="address.html">收货管理</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--左侧导航结束-->
+			</div>
+			<div class="col-md-10	">
+				<div class="panel panel-default">
+					<ul class="nav nav-tabs">
+						<li><a href="password.html">修改密码</a></li>
+						<li class="active"><a href="#">个人资料</a></li>
+						<li><a href="upload.html">上传头像</a></li>
+						<li><a href="address.html">收货管理</a></li>
+					</ul>
+					<div class="panel-body">
+						<!--修改资料表单开始-->
+						<form id="form-info" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-md-2 control-label">用户名：</label>
+								<div class="col-md-8">
+									<input id="inp-username" type="text" class="form-control" readonly="readonly">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">电话号码：</label>
+								<div class="col-md-8">
+									<input id="inp-phone" name="phone" type="text" class="form-control" placeholder="请输入电话号码">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">电子邮箱：</label>
+								<div class="col-md-8">
+									<input id="inp-email" name="email" type="text" class="form-control" placeholder="请输入电子邮箱">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">性别：</label>
+								<div class="col-md-8">
+									<label class="radio-inline">
+										<input id="radio-male" type="radio" name="gender" value="1" checked="checked">男
+									</label>
+									<label class="radio-inline">
+										<input id="radio-female" type="radio" name="gender" value="0">女
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<input id="btn-info-change" type="button" class="btn btn-primary" value="修改" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚开始-->
+		<div class="clearfix"></div>
+		<footer class="footer">
+			<!-- 品质保障，私人定制等-->
+			<div class="text-center rights container">
+				<div class="col-md-offset-2 col-md-2">
+					<span class="fa fa-thumbs-o-up"></span>
+					<p>品质保障</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-address-card-o"></span>
+					<p>私人订制</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-graduation-cap"></span>
+					<p>学生特供</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-bitcoin"></span>
+					<p>专属特权</p>
+				</div>
+			</div>
+			<!--联系我们、下载客户端等-->
+			
+		</footer>
+		<!--页脚结束-->
+	<script type="text/javascript">
+	// 第144行，第150行，第156行，第163行，第166行：添加id
+	$(document).ready(function() {
+		$.ajax({
+			"url":"/users/info/show",
+			"type":"get",
+			"dataType":"json",
+			"success":function(json) {
+				if (json.state == "2000") {
+					$("#inp-username").val(json.data.username);
+					$("#inp-phone").val(json.data.phone);
+					$("#inp-email").val(json.data.email);
+					
+					if (json.data.gender == 0) {
+						$("#radio-female").prop("checked", "checked");
+					} else {
+						$("#radio-male").prop("checked", "checked");
+					}
+				} else {
+					alert(json.message);
+					// 应该跳转到“退出登录”功能的URL
+				}
+			}
+		});
+	});
+	
+	// 第163行，第166行：修改value的值分别为1和0
+	// 第150行，第156行：添加name，且值必须是控制器接收的参数名
+	// 第140行，第172行：添加id
+	$("#btn-info-change").click(function() {
+		// 获取用户输入的数据
+		let phone = $("#inp-phone").val();
+		let email = $("#inp-email").val();
+		
+		// 检查提交的参数的有效性
+		if (phone.length < 4) {
+			alert("修改个人资料失败！电话号码格式错误！");
+			return;
+		}
+		if (email.length < 4) {
+			alert("修改个人资料失败！电子邮箱格式错误！");
+			return;
+		}
+		
+		$.ajax({
+			"url":"/users/info/change",
+			"data":$("#form-info").serialize(),
+			"type":"post",
+			"dataType":"json",
+			"success":function(json) {
+				// 仅当HTTP响应是2xx，才执行success的回调函数
+				if (json.state == "2000") {
+					alert("修改成功！");
+				} else {
+					alert(json.message);
+				}
+			},
+			"error":function() {
+				// 只要HTTP响应码不是2xx，则执行error的回调函数，例如302、404、500等
+				alert("您的登录信息已经过期，请重新登录！\r\r*开发阶段出现这个错误时，请检查浏览器的Network，以确定错误发生的原因！");
+				// location.href = "/web/login.html";
+			}
+		});
+	});
+	</script>
+	</body>
+
+</html>
