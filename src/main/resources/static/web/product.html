@@ -148,8 +148,39 @@
 							<input class="btn btn-primary btn-lg btn-block" type="button" value="立即购买">
 						</div>
 						<div class="col-md-12 form-space">
-							<button id="btn-add-toCart" type="button" class="btn btn-default go-cart"><span class="fa fa-cart-plus"></span> 加入购物车</button>
-							<button type="button" class="btn btn-default"><span class="fa fa-heart-o"></span> 加入收藏</button>
+							<button id="btn-add-toCart" type="button" class="btn btn-default go-cart"><span class="fa fa-cart-plus"></span> 加入购物车</button>&nbsp;&nbsp;&nbsp;
+							<button type="button" class="btn btn-default"><span class="fa fa-heart-o"></span> 加入收藏</button>&nbsp;&nbsp;&nbsp;
+
+							<!-- 好物分享弹出窗口 -->
+							<!--bootstrap实现弹出模态框-->
+							<button type="button" class="btn btn-default" data-target="#myModal" data-toggle="modal">
+								<span class="fa fa-share" aria-hidden="true"></span> 好物分享
+							</button>
+							<!--fade 淡入淡出-->
+							<div class="modal fade"  id="myModal" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h5 class="modal-title fa fa-share-square" id="myModallabel"> 好物分享</h5>
+										</div>
+										<form id="formData" class="form-horizontal">
+											<div class="modal-body">
+												<div class="form-group">
+													<div class="col-lg-12">
+														<input id="username_share" type="text" value="" placeholder="请输入需要分享的用户名" class="form-control"></br>
+													</div>
+												</div>
+											</div>
+
+											<div class="modal-footer">
+												<button class="btn btn-default" type="button" data-dismiss="modal">关闭</button>
+												<button id="btn-share" class="btn btn-success" type="button" onclick="">提交</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -242,11 +273,10 @@
 		<script type="text/javascript" src="jquery-getUrlParam.js"></script>
 		
 		<script type="text/javascript">		
-		
-		
-		/* 显示商品详情 */
-		//设置id为全局变量，因为本网页后续的收藏和购物车也会用到 
-		let id;
+
+			/* 显示商品详情 */
+			//设置id为全局变量，因为本网页后续的收藏和购物车也会用到
+			let id;
 		
 			$(document).ready(function(){
 				//调用JS文件中的方法，获取到网址上id具体的值 
@@ -285,6 +315,40 @@
 					}
 				});
 			}
+
+
+			/* 好物分享 */
+			$("#btn-share").click(function() {
+				// 获取用户输入的数据
+				let usernameShare = $("#username_share").val();
+
+				$.ajax({
+					"url":"/share/add",
+					"data":{
+						"proId":id,
+						"username":usernameShare
+					},
+					"type":"post",
+					"dataType":"json",
+					"success":function(json) {
+						// 仅当HTTP响应是2xx，才执行success的回调函数
+						if (json.state == "2000") {
+							alert("分享成功！");
+							window.location.href="product.html";
+						} else {
+							alert(json.message);
+						}
+					},
+					"error":function() {
+						// 只要HTTP响应码不是2xx，则执行error的回调函数，例如302、404、500等
+						alert("您的登录信息已经过期，请重新登录！\r\r*开发阶段出现这个错误时，请检查浏览器的Network，以确定错误发生的原因！");
+						// location.href = "/web/login.html";
+					}
+				});
+			});
+
+
+
 		
 			  
 			/* 购物车 */

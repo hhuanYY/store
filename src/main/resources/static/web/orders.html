@@ -37,7 +37,7 @@
 					<ul class="list-inline pull-right">
 						<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
 						<li class="li-split">|</li>
-						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;分享</a></li>
 						<li class="li-split">|</li>
 						<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
 						<li class="li-split">|</li>
@@ -96,16 +96,16 @@
 						<div class="panel-heading">
 							<!--主选项：我的订单-->
 							<p class="panel-title">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的订单</a>
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的分享</a>
 							</p>
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<div><a href="orders.html"><b>全部订单</b></a></div>
-								<div><a href="orders.html">待付款</a></div>
-								<div><a href="orders.html">待收货</a></div>
-								<div><a href="orders.html">待评价</a></div>
-								<div><a href="orders.html">退货退款</a></div>
+								<div><a href="orders.html"><b>全部分享</b></a></div>
+								<div><a href="orders.html">删除</a></div>
+<!--								<div><a href="orders.html">待收货</a></div>-->
+<!--								<div><a href="orders.html">待评价</a></div>-->
+<!--								<div><a href="orders.html">退货退款</a></div>-->
 							</div>
 						</div>
 					</div>
@@ -128,113 +128,35 @@
 				</div>
 			</div>
 			<!--左侧导航结束-->
-			<div class="col-md-10">
+			<div  class="col-md-10">
 				<div class="panel panel-default">
-					<div class="panel-heading">
-						<p class="panel-title">
-							订单号：1101000001，下单时间：2018-12-1 17:50:30 ，收货人：八戒
-						</p>
-					</div>
 					<div class="panel-body">
 						<table class="orders-table" width="100%">
 							<thead>
 								<tr>
-									<th width="15%"></th>
-									<th width="30%">商品</th>
-									<th width="8%">单价</th>
-									<th width="8%">数量</th>
-									<th width="9%">小计</th>
-									<th width="10%">售后</th>
-									<th width="10%">状态</th>
-									<th width="10%">操作</th>
+									<th width="10%">样式</th>
+									<th width="20%">商品</th>
+									<th width="10%">单价</th>
+									<th width="10%">分享者</th>
+									<th width="10%">分享时间</th>
 								</tr>
 							</thead>
-							<tbody class="orders-body">
+
+							<tbody id="shares-list"  class="orders-body">
 								<tr>
 									<td><img src="../images/portal/12DELLXPS13-silvery/collect.png" class="img-responsive" /></td>
 									<td>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</td>
 									<td>¥<span>5298</span></td>
-									<td>1件</td>
 									<td>¥<span>5298</span></td>
-									<td><a href="#">申请售后</a></td>
-									<td>
-										<div>已发货</div>
-										<div><a href="orderInfo.html">订单详情</a></div>
-									</td>
-									<td><a href="#" class="btn btn-default btn-xs">确认收货</a></td>
 								</tr>
 								<tr>
 									<td><img src="../images/portal/16LenovoYOGA900green/collect.png" class="img-responsive" /></td>
 									<td>戴尔(DELL)XPS13-9360-R1609 13.3</td>
 									<td>¥<span>4696</span></td>
-									<td>2件</td>
 									<td>¥<span>9392</span></td>
-									<td><a href="#">申请售后</a></td>
-									<td>
-										<div>已发货</div>
-										<div><a href="orderInfo.html">订单详情</a></div>
-									</td>
-									<td><a href="#" class="btn btn-default btn-xs">确认收货</a></td>
-								</tr>
-								<tr>
-									<td><img src="../images/portal/13LenovoIdeaPad310_silvery/collect.png" class="img-responsive" /></td>
-									<td>戴尔(DELL)魔方15MF Pro-R2505TSS灵越</td>
-									<td>¥<span>5999</span></td>
-									<td>1件</td>
-									<td>¥<span>5999</span></td>
-									<td><a href="#">申请售后</a></td>
-									<td>
-										<div>已发货</div>
-										<div><a href="orderInfo.html">订单详情</a></div>
-									</td>
-									<td><a href="#" class="btn btn-default btn-xs">确认收货</a></td>
 								</tr>
 							</tbody>
 						</table>
-						<div>
-							<span class="pull-right">订单总金额：¥20689</span>
-						</div>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<p class="panel-title">
-							订单号：1101000301，下单时间：2018-12-2 20:32:17 ， 收货人：八戒
-						</p>
-					</div>
-					<div class="panel-body">
-						<table class="orders-table" width="100%">
-							<thead>
-								<tr>
-									<th width="15%"></th>
-									<th width="30%">商品</th>
-									<th width="8%">单价</th>
-									<th width="8%">数量</th>
-									<th width="9%">小计</th>
-									<th width="10%">售后</th>
-									<th width="10%">状态</th>
-									<th width="10%">操作</th>
-								</tr>
-							</thead>
-							<tbody class="orders-body">
-								<tr>
-									<td><img src="../images/portal/12DELLXPS13-silvery/collect.png" class="img-responsive" /></td>
-									<td>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</td>
-									<td>¥<span>5298</span></td>
-									<td>1件</td>
-									<td>¥<span>5298</span></td>
-									<td><a href="#">申请售后</a></td>
-									<td>
-										<div>已发货</div>
-										<div><a href="orderInfo.html">订单详情</a></div>
-									</td>
-									<td><a href="#" class="btn btn-default btn-xs">确认收货</a></td>
-								</tr>
-							</tbody>
-						</table>
-						<div>
-							<span class="pull-right">订单总金额：¥5298</span>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -264,7 +186,47 @@
 			<!--联系我们、下载客户端等-->
 
 		</footer>
+
 		<!--页脚结束-->
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				showAllCartsList();
+			});
+
+			function showAllCartsList(){
+				$("#shares-list").empty();
+				$.ajax({
+					"url":"/share/show",
+					"type":"get",
+					"dataType":"json",
+					"success":function(json){
+						for(let i=0; i < json.data.length; i++){
+							let html=
+								 '<tr>'
+									+ '<td><img src="../#{image}/collect.png" class="img-responsive" /></td>'
+									+ '<td>#{title}</td>'
+									+ '<td><span>#{price}</span></td>'
+									+ '<td><span>#{sharer}</span></td>'
+									+ '<td><span>#{sharetime}</span></td>'
+								+ '</tr>';
+
+							//replace进行替换
+							html = html.replace(/#{image}/g,json.data[i].image);
+							html = html.replace(/#{title}/g,json.data[i].title);
+							html = html.replace(/#{price}/g,json.data[i].price);
+							html = html.replace(/#{sharer}/g,json.data[i].sharer);
+							html = html.replace(/#{sharetime}/g, json.data[i].sharetime);
+
+							$("#shares-list").append(html);
+						}
+					}
+				});
+			}
+
+		</script>
+
 	</body>
 
 </html>

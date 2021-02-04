@@ -44,7 +44,7 @@ public class UserController extends BaseController{
 	}
 	
 	@RequestMapping("login")  //登录时还需要保存用户登录成功的信息
-	public JsonResult<User> longin(String username,String password,HttpSession session){
+	public JsonResult<User> login(String username,String password,HttpSession session){
 		JsonResult<User> jsonResult = new JsonResult<User>();
 		User data = userService.login(username, password);
 		jsonResult.setState(OK);
