@@ -34,17 +34,6 @@ public class ShareVO extends BaseEntity {
         this.sharetime = sharetime;
     }
 
-    @Override
-    public String toString() {
-        return "ShareVO{" +
-                "price=" + price +
-                ", title='" + title + '\'' +
-                ", image='" + image + '\'' +
-                ", sharer='" + sharer + '\'' +
-                ", sharetime=" + sharetime +
-                '}';
-    }
-
     public Long getPrice() {
         return price;
     }

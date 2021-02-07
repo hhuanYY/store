@@ -36,17 +36,6 @@ public class Share extends BaseEntity {
     private Date sharetime;
 
 
-    @Override
-    public String toString() {
-        return "Share{" +
-                "id=" + id +
-                ", proid=" + proid +
-                ", uid=" + uid +
-                ", sharer='" + sharer + '\'' +
-                ", sharetime=" + sharetime +
-                '}';
-    }
-
     public Date getSharetime() {
         return sharetime;
     }
