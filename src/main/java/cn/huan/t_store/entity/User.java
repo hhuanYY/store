@@ -3,7 +3,7 @@ package cn.huan.t_store.entity;
 public class User extends BaseEntity {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 7678078458216011852L;
 	private Integer uid;
