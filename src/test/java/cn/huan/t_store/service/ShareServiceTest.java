@@ -1,6 +1,8 @@
 package cn.huan.t_store.service;
 
+import cn.huan.t_store.entity.Product;
 import cn.huan.t_store.entity.ShareVO;
+import cn.huan.t_store.mapper.ProductMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ public class ShareServiceTest {
     @Autowired
     private ShareService shareService;
 
+    @Autowired
+    private ProductMapper productMapper;
+
     @Test
     public void share() {
         shareService.insertShare(10000088, "root", "HANHAN", 7);
@@ -31,4 +36,12 @@ public class ShareServiceTest {
         List<ShareVO> shareVOS = shareService.listShares(4);
         System.err.println(shareVOS);
     }
+
+    @Test
+    public void hotSort() {
+        List<Product> hotSort = productMapper.findHotSort();
+        System.err.println(hotSort);
+
+    }
+
 }

@@ -40,4 +40,5 @@ public class ShareMapperTest {
         List<ShareVO> shareVOS = shareMapper.listShares(7);
         System.err.println(shareVOS);
     }
+
 }

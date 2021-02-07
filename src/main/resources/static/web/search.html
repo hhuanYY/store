@@ -83,154 +83,84 @@
 			<div class="col-md-6">
 				<form action="search.html" class="form-inline pull-right" role="form">
 					<div class="form-group">
-						<input type="text" class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索">
+						<input id="keyName" type="text" class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索">
 					</div>
-					<button type="submit" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+					<button id="btn-keyName" type="button" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
 				</form>
 			</div>
 		</div>
 		<!--头部结束-->
 		<!--导航结束-->
 		<div class="container">
-			<div class="col-md-offset-1 col-md-10"><b>笔记本</b>&nbsp;<small>搜索结果：</small></div>
-			<div class="col-md-offset-1 col-md-10">
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/14LenovoYOGA710 _gold/collect.png" class="img-responsive" />
-						<p>¥3398.00</p>
-						<p class="text-row-3"><a href="product.html"><small>联想（Lenovo）YOGA710 14英寸触控笔记本（i7-7500U 8G 256GSSD 2G独显 全高清IPS 360°翻转 正版office）金</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
+			<div class="col-md-2">
+				<!--左侧导航开始-->
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<!--主选项：我的订单-->
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的分享</a>
+							</p>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div><a href="orders.html"><b>全部分享</b></a></div>
+								<div><a href="orders.html">删除</a></div>
+								<!--								<div><a href="orders.html">待收货</a></div>-->
+								<!--								<div><a href="orders.html">待评价</a></div>-->
+								<!--								<div><a href="orders.html">退货退款</a></div>-->
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/17Lenovo)xiaoxinAir13Pro_gold/collect.png" class="img-responsive" />
-						<p>¥6320.00</p>
-						<p class="text-row-3"><a href="product.html"><small>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/20DellXPS15-9550/collect.png" class="img-responsive" />
-						<p>¥4688.00</p>
-						<p class="text-row-3"><a href="product.html"><small>戴尔(DELL) XPS15升级版 </small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/12(DELL)XPS13gold/collect.png" class="img-responsive" />
-						<p>¥4600.00</p>
-						<p class="text-row-3"><a href="product.html"><small>戴尔(DELL)XPS13-9360-R1609 13.3</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<!--主选项：资料修改-->
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">资料修改</a>
+							</p>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div><a href="password.html"><b>修改密码</b></a></div>
+								<div><a href="userdata.html">个人资料</a></div>
+								<div><a href="upload.html">上传头像</a></div>
+								<div><a href="address.html">收货管理</a></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-offset-1 col-md-10">
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/14LenovoYOGA710 _gold/collect.png" class="img-responsive" />
-						<p>¥3398.00</p>
-						<p class="text-row-3"><a href="product.html"><small>联想（Lenovo）YOGA710 14英寸触控笔记本（i7-7500U 8G 256GSSD 2G独显 全高清IPS 360°翻转 正版office）金</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/17Lenovo)xiaoxinAir13Pro_gold/collect.png" class="img-responsive" />
-						<p>¥6320.00</p>
-						<p class="text-row-3"><a href="product.html"><small>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/20DellXPS15-9550/collect.png" class="img-responsive" />
-						<p>¥4688.00</p>
-						<p class="text-row-3"><a href="product.html"><small>戴尔(DELL) XPS15升级版 </small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/12(DELL)XPS13gold/collect.png" class="img-responsive" />
-						<p>¥4600.00</p>
-						<p class="text-row-3"><a href="product.html"><small>戴尔(DELL)XPS13-9360-R1609 13.3</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
+			<div  class="col-md-10">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<table class="orders-table" width="100%">
+							<thead>
+							<tr>
+								<th width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;样式</th>
+								<th width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品</th>
+								<th width="10%">单价</th>
+							</tr>
+							</thead>
+
+							<tbody id="showLikeList"  class="orders-body">
+							<tr>
+								<td><img src="../images/portal/12DELLXPS13-silvery/collect.png" class="img-responsive" /></td>
+								<td>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</td>
+								<td>¥<span>5298</span></td>
+								<td>¥<span>5298</span></td>
+							</tr>
+							<tr>
+								<td><img src="../images/portal/16LenovoYOGA900green/collect.png" class="img-responsive" /></td>
+								<td>戴尔(DELL)XPS13-9360-R1609 13.3</td>
+								<td>¥<span>4696</span></td>
+								<td>¥<span>9392</span></td>
+							</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-offset-1 col-md-10">
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/14LenovoYOGA710 _gold/collect.png" class="img-responsive" />
-						<p>¥3398.00</p>
-						<p class="text-row-3"><a href="product.html"><small>联想（Lenovo）YOGA710 14英寸触控笔记本（i7-7500U 8G 256GSSD 2G独显 全高清IPS 360°翻转 正版office）金</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/17Lenovo)xiaoxinAir13Pro_gold/collect.png" class="img-responsive" />
-						<p>¥6320.00</p>
-						<p class="text-row-3"><a href="product.html"><small>联想(Lenovo)小新Air13 Pro 13.3英寸14.8mm超轻薄笔记本电脑</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/20DellXPS15-9550/collect.png" class="img-responsive" />
-						<p>¥4688.00</p>
-						<p class="text-row-3"><a href="product.html"><small>戴尔(DELL) XPS15升级版 </small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="goods-panel">
-						<img src="../images/portal/12(DELL)XPS13gold/collect.png" class="img-responsive" />
-						<p>¥4600.00</p>
-						<p class="text-row-3"><a href="product.html"><small>戴尔(DELL)XPS13-9360-R1609 13.3</small></a></p>
-						<span>
-						<a href="javascript:void(0)" class="btn btn-default btn-xs add-fav"><span class="fa fa-heart-o"></span>加入收藏</a>
-						<a href="cart.html" class="btn btn-default btn-xs add-cart"><span class="fa fa-cart-arrow-down"></span>加入购物车</a>
-						</span>
-					</div>
-				</div>
-			</div>
+
 			<div class="col-md-offset-1 col-md-10">
 				<p align="center">
 					<a href="#">上一页</a>
@@ -266,7 +196,55 @@
 			<!--联系我们、下载客户端等-->
 			
 		</footer>
+
 		<!--页脚结束-->
+		<script type="text/javascript">
+
+			$("#btn-keyName").click(function () {
+				$("#showLikeList").empty();
+				let keyName = $("#keyName").val();
+
+				$.ajax({
+					"url":"/products/showLikeList",
+					"data":{
+						"keyName":keyName,
+					},
+					"type":"get",
+					"dataType":"json",
+					"success":function(json) {
+						if (json.state == "2000") {
+							for(let i=0; json.data.length; i++){
+								let html =
+									'<tr>'
+										+ '<td><img src="../#{image}/collect.png" class="img-responsive" /></td>'
+										+ '<td>#{title}</td>'
+										+ '<td><span>#{price}</span></td>'
+								 + '</tr>';
+
+								html = html.replace("#{title}",json.data[i].title);
+								html = html.replace("#{price}",json.data[i].price);
+								html = html.replace("#{image}",json.data[i].image);
+
+								//然后将拼接完的追加到 <select>中
+								$("#showLikeList").append(html);
+
+							}
+						} else {
+							alert(json.message);
+						}
+					},
+					"error":function() {
+						// 只要HTTP响应码不是2xx，则执行error的回调函数，例如302、404、500等
+						alert("您的登录信息已经过期，请重新登录！\r\r*开发阶段出现这个错误时，请检查浏览器的Network，以确定错误发生的原因！");
+						// location.href = "/web/login.html";
+					}
+				});
+			});
+
+
+
+		</script>
+
 	</body>
 
 </html>

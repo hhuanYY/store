@@ -13,12 +13,26 @@ public interface ProductMapper {
 	 * @return
 	 */
 	List<Product> findNewArrival();
-	
+
+
+	/**
+	 * 根据优先级分页查询
+	 * @return
+	 */
+	List<Product> findHotSort();
+
 	
 	/**
-	 *    根据商品id查询商品
+	 * 根据商品id查询商品
 	 * @param id
 	 * @return
 	 */
 	Product findById(Integer id);
+
+	/**
+	 * 模糊查询商品列表
+	 * @param keyName 关键字
+	 * @return
+	 */
+	List<Product> findLikeList(String keyName);
 }

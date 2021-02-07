@@ -13,30 +13,40 @@ import cn.huan.t_store.service.ProductService;
 import cn.huan.t_store.util.JsonResult;
 
 
-
 @RestController
 @RequestMapping("products")
-public class ProductController extends BaseController{
+public class ProductController extends BaseController {
 
 	@Autowired
 	private ProductService productService;
-	
+
 	@GetMapping("showNewArr")
-	public JsonResult<List<Product>> showNewArr(){
+	public JsonResult<List<Product>> showNewArr() {
 		JsonResult<List<Product>> jsonResult = new JsonResult<List<Product>>();
-		List<Product>data = productService.getNewArrival();
+		List<Product> data = productService.getNewArrival();
 		jsonResult.setState(OK);
 		jsonResult.setData(data);
 		return jsonResult;
 	}
-	
-	
+
+	@GetMapping("showHotSort")
+	public JsonResult<List<Product>> showHotSort() {
+		List<Product> hotSort = productService.getHotSort();
+		return new JsonResult<>(OK, hotSort);
+	}
+
 	@GetMapping("{id}/showOne")
-	public JsonResult<Product> showOne(@PathVariable("id") Integer id){
+	public JsonResult<Product> showOne(@PathVariable("id") Integer id) {
 		JsonResult<Product> jsonResult = new JsonResult<Product>();
 		Product data = productService.getById(id);
 		jsonResult.setState(OK);
 		jsonResult.setData(data);
 		return jsonResult;
+	}
+
+	@GetMapping("showLikeList")
+	public JsonResult<List<Product>> showLikeList(String keyName) {
+		List<Product> likeList = productService.getLikeList(keyName);
+		return new JsonResult<>(OK, likeList);
 	}
 }

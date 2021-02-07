@@ -12,12 +12,25 @@ public interface ProductService {
 	 * @return
 	 */
 	List<Product> getNewArrival();
-	
+
+	/**
+	 * 热门排行
+	 * @return
+	 */
+	List<Product> getHotSort();
+
 	/**
 	 *   根据id查询商品
 	 * @param id
 	 * @return
 	 */
 	Product getById(Integer id);
+
+	/**
+	 * 模糊查询商品
+	 * @param keyName
+	 * @return
+	 */
+	List<Product> getLikeList(String keyName);
 	
 }

@@ -27,7 +27,20 @@
 		ORDER BY 
 			created_time DESC 
 		LIMIT 
-			0,4
+			0,10
+	</select>
+
+	<select id="findHotSort" resultMap="ProductEntity">
+		SELECT
+			*
+		FROM
+			t_product
+		WHERE
+			status=1
+		ORDER BY
+			priority DESC
+		LIMIT
+			0,10
 	</select>
 	
 	
@@ -40,6 +53,16 @@
 			t_product 
 		WHERE 
 			id=#{id} 
+	</select>
+
+	<select id="findLikeList" resultMap="ProductEntity" >
+		SELECT
+		DISTINCT title,image,price
+		FROM
+			t_product
+		<if test="keyName != '' and keyName != null">
+			WHERE title LIKE CONCAT('%',#{keyName},'%')
+		</if>
 	</select>
 
 </mapper>

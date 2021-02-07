@@ -32,8 +32,19 @@ public class ProductServiceImpl implements ProductService{
 		}
 		return result;
 	}
-	
-	
+
+
+	/**
+	 * 热门排行
+	 * @return
+	 */
+	@Override
+	public List<Product> getHotSort() {
+		List<Product> hotSort = productMapper.findHotSort();
+		return hotSort;
+	}
+
+
 	//根据id查询商品
 	@Override
 	public Product getById(Integer id) {
@@ -49,11 +60,15 @@ public class ProductServiceImpl implements ProductService{
 		result.setModifiedTime(null);
 		return result;
 	}
-	
-	
+
+	@Override
+	public List<Product> getLikeList(String keyName) {
+		List<Product> likeList = productMapper.findLikeList(keyName);
+		return likeList;
+	}
 
 	/**
-	 *    持久层的查询直接return
+	 * 持久层的查询直接return
 	 * @return
 	 */
 	private List<Product> findNewArrvial(){
