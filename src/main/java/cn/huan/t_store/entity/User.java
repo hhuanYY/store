@@ -89,13 +89,6 @@ public class User extends BaseEntity {
 	}
 
 	@Override
-	public String toString() {
-		return "User [uid=" + uid + ", username=" + username + ", password=" + password + ", salt=" + salt + ", phone="
-				+ phone + ", email=" + email + ", gender=" + gender + ", avatar=" + avatar + ", isDelete=" + isDelete
-				+ ", toString()=" + super.toString() + "]";
-	}
-
-	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
