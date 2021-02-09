@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<!--360浏览器H5兼容设置-->
 		<meta name="renderer" content="webkit" />
-		<title>优势者商城</title>
+		<title>消费电子产品推广-商品详情</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--导入核心文件-->
 		<script src="../bootstrap3/js/holder.js"></script>
@@ -40,7 +40,7 @@
 					<ul class="list-inline pull-right">
 						<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
 						<li class="li-split">|</li>
-						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;订单</a></li>
+						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;分享</a></li>
 						<li class="li-split">|</li>
 						<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
 						<li class="li-split">|</li>
@@ -131,7 +131,7 @@
 					<h1 id="product-title" class="col-md-12 title-row-1" >戴尔Dell 燃700R1605银色</h1>
 					<p class="col-md-12 text-row-1"><small>仅上海，广州，沈阳仓有货！预购从速！</small></p>
 					<div class="col-md-12 price-bar">
-						<small>学员售价：</small> ¥<span id="product-price">4899</span>.00
+						<small>最低售价：</small> ¥<span id="product-price">4899</span>.00
 						<div><small id="product-point">*退货补运费 *7天无理由退货 *24小时快速退款 </small></div>
 					</div>
 					<form class="form-inline product-form col-md-12" role="form">
@@ -142,10 +142,10 @@
 							<input id="numUp"   type="button" class="num-btn"  value="+" />
 						</div>
 						<div class="col-md-12 form-space">
-							<p><small><b>学子商城</b>发货并提供售后服务,今日下单,明日送达</small></p>
+							<p><small><b>注意:</b>发货并提供售后服务,今日下单,明日送达</small></p>
 						</div>
 						<div class="col-md-12 form-space">
-							<input class="btn btn-primary btn-lg btn-block" type="button" value="立即购买">
+							<input id="btn-buy-now" class="btn btn-primary btn-lg btn-block" type="button" value="立即购买">
 						</div>
 						<div class="col-md-12 form-space">
 							<button id="btn-add-toCart" type="button" class="btn btn-default go-cart"><span class="fa fa-cart-plus"></span> 加入购物车</button>&nbsp;&nbsp;&nbsp;
@@ -198,7 +198,7 @@
 							<div class="col-md-11 saled-title">正品保障</div>
 						</div>
 						<div class="row">
-							<p class="col-md-offset-1 col-md-11 saled-content">学子商城向您保证所售商品均为正品行货，学子商城自营商品开具机打发票或电子发票。</p>
+							<p class="col-md-offset-1 col-md-11 saled-content">本网站向您保证所售商品均为正品行货，自营商品开具机打发票或电子发票。</p>
 						</div>
 						<div class="row">
 							<div class="col-md-1 saled-icon"><span class="fa fa-wrench"></span></div>
@@ -212,7 +212,7 @@
 							<div class="col-md-11 saled-title">郑重承诺</div>
 						</div>
 						<div class="row">
-							<p class="col-md-offset-1 col-md-11 saled-content">学子商城销售并发货的商品，由学子商城提供发票和相应的售后服务。请您放心购买！
+							<p class="col-md-offset-1 col-md-11 saled-content">销售并发货的商品，提供发票和相应的售后服务。请您放心购买！
 								<br /> 注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
 							</p>
 						</div>
@@ -222,7 +222,7 @@
 						</div>
 						<div class="row">
 							<p class="col-md-offset-1 col-md-11 saled-content">
-								凭质保证书及学子商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由学子商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。学子商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！
+								凭质保证书，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由学子商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。还为您提供具有竞争力的商品价格和运费政策，请您放心购买！
 								<br /> 注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
 							</p>
 						</div>
@@ -231,11 +231,11 @@
 							<div class="col-md-11 saled-title">无忧退货</div>
 						</div>
 						<div class="row">
-							<p class="col-md-offset-1 col-md-11 saled-content">客户购买学子商城商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）</p>
+							<p class="col-md-offset-1 col-md-11 saled-content">客户购买商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）</p>
 						</div>
 						<div class="saled-content">
 							<small><b>权利声明：</b><br />
-						所有商品信息、商品咨询等内容，是学子商城重要的经营资源，未经许可，禁止非法转载使用。<br />
+						所有商品信息、商品咨询等内容，是重要的经营资源，未经许可，禁止非法转载使用。<br />
 						注：本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</small>
 						</div>
 					</div>
@@ -257,7 +257,7 @@
 				</div>
 				<div class="col-md-2">
 					<span class="fa fa-graduation-cap"></span>
-					<p>学生特供</p>
+					<p>品牌特供</p>
 				</div>
 				<div class="col-md-2">
 					<span class="fa fa-bitcoin"></span>
@@ -317,6 +317,38 @@
 			}
 
 
+			/* 立即购买 */
+			$("#btn-buy-now").click(function() {
+				// 获取用户选择的商品数量
+				let acount = $("#num").val();
+				/* 此处的id就是商品的id：pid,通过在主页中返回在网址URL中的pid调用方法得到  */
+				$.ajax({
+					"url":"/buyNow/insert",
+					"data":{
+						"pid":id,
+						"num":acount
+					},
+					"type":"post",
+					"dataType":"json",
+					"success":function(json) {
+						// 仅当HTTP响应是2xx，才执行success的回调函数
+						if (json.state == "2000") {
+							alert("购买成功！");
+							// window.location.href="orderConfirm.html";
+						} else {
+							alert(json.message);
+						}
+					},
+					"error":function() {
+						// 只要HTTP响应码不是2xx，则执行error的回调函数，例如302、404、500等
+						alert("您还没有登录或者登录信息已经过期，请重新登录！\r\r*开发阶段出现这个错误时，请检查浏览器的Network，以确定错误发生的原因！");
+						// location.href = "/web/login.html";
+					}
+				});
+			});
+
+
+
 			/* 好物分享 */
 			$("#btn-share").click(function() {
 				// 获取用户输入的数据
@@ -351,8 +383,7 @@
 
 
 
-		
-			  
+
 			/* 购物车 */
 			$("#btn-add-toCart").click(function() {
 				// 获取用户选择的商品数量

@@ -1,5 +1,6 @@
 package cn.huan.t_store.mapper;
 
+import cn.huan.t_store.entity.BuyNow;
 import cn.huan.t_store.entity.Product;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,6 +22,9 @@ public class ProductMapperTest {
     @Autowired
     private ProductMapper productMapper;
 
+    @Autowired
+    private BuyNowMapper buyNowMapper;
+
     @Test
     public void hotSort() {
         List<Product> hotSort = productMapper.findHotSort();
@@ -31,5 +35,17 @@ public class ProductMapperTest {
     public void like() {
         List<Product> result = productMapper.findLikeList("联想");
         System.err.println(result);
+    }
+
+
+    @Test
+    public void bynow() {
+        BuyNow buyNow = new BuyNow();
+        buyNow.setNum(1);
+        buyNow.setPid(100001);
+        buyNow.setNum(10);
+        buyNow.setPrice(38);
+        Integer integer = buyNowMapper.insertBuyNowPro(buyNow);
+        System.err.println(integer);
     }
 }

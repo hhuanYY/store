@@ -1,5 +1,6 @@
 package cn.huan.t_store.service;
 
+import cn.huan.t_store.entity.BuyNow;
 import cn.huan.t_store.entity.Product;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.mapper.ProductMapper;
@@ -26,6 +27,9 @@ public class ShareServiceTest {
     @Autowired
     private ProductMapper productMapper;
 
+    @Autowired
+    private BuyNowService buyNowService;
+
     @Test
     public void share() {
         shareService.insertShare(10000088, "root", "HANHAN", 7);
@@ -41,7 +45,12 @@ public class ShareServiceTest {
     public void hotSort() {
         List<Product> hotSort = productMapper.findHotSort();
         System.err.println(hotSort);
+    }
 
+    @Test
+    public void bynows() {
+        buyNowService.insertBuyNowPro(1, 2, 3);
+        System.err.println("OK");
     }
 
 }
