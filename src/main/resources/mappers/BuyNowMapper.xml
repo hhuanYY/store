@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+
+<mapper namespace="cn.huan.t_store.mapper.BuyNowMapper">
+
+	<!-- 立即购买 -->
+	<!-- Integer insert(); -->
+	<insert id="insertBuyNowPro">
+	INSERT INTO t_buy_now(
+		uid, pid, num, price
+	) VALUES(
+		#{uid},#{pid},#{num},#{price}
+	)
+	</insert>
+
+
+<!--	<delete id="deleteByCid">-->
+<!--		DELETE FROM -->
+<!--			t_cart -->
+<!--		WHERE -->
+<!--			cid=#{cid}-->
+<!--	</delete>-->
+<!--	-->
+<!--	-->
+<!--	-->
+<!--	&lt;!&ndash; 当该商品已经添加至购物车，直接修改num数值即可 &ndash;&gt;-->
+<!--	&lt;!&ndash; 	Integer update(			-->
+<!--			@Param("cid")Integer cid,-->
+<!--			@Param("num")Integer num,-->
+<!--			@Param("modified_user")String modified_user,-->
+<!--			@Param("modified_time")Date modified_time); &ndash;&gt;-->
+<!--	<update id="update">-->
+<!--		UPDATE -->
+<!--			t_cart -->
+<!--		SET -->
+<!--			num=#{num} -->
+<!--		WHERE -->
+<!--			cid=#{cid}-->
+<!--	</update>-->
+<!--	-->
+
+<!--	&lt;!&ndash; 根据uid和Pid同时满足的条件下，查询即将加入购物车的商品是否已经被添加至购物车 &ndash;&gt;-->
+<!--	&lt;!&ndash; Cart findByUidAndPid(Integer uid,Integer pid); &ndash;&gt;-->
+<!--	<select id="findByUidAndPid" resultMap="findEntityCart">-->
+<!--		SELECT -->
+<!--			* -->
+<!--		FROM -->
+<!--			t_cart -->
+<!--		WHERE -->
+<!--			uid=#{uid} AND pid=#{pid}-->
+<!--	</select>-->
+<!--	-->
+<!--	<select id="findAllCarts" resultType="cn.huan.t_store.entity.CartVO">-->
+<!--		SELECT -->
+<!--			cid,uid,pid,t_cart.num,-->
+<!--			t_cart.price,title,image,t_product.price AS realPrice-->
+<!--		FROM-->
+<!--			t_cart LEFT JOIN t_product ON t_cart.pid=t_product.id -->
+<!--		WHERE -->
+<!--			uid=#{uid}-->
+<!--		ORDER BY -->
+<!--			t_cart.created_time DESC -->
+<!--	</select>-->
+<!--	-->
+<!--	<select id="findByCid" resultMap="findEntityCart">-->
+<!--	SELECT -->
+<!--		* -->
+<!--	FROM -->
+<!--		t_cart -->
+<!--	WHERE -->
+<!--		cid=#{cid}-->
+<!--	</select>-->
+	
+
+</mapper>
+
+
+
