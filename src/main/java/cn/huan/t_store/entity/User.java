@@ -16,6 +16,21 @@ public class User extends BaseEntity {
 	private String avatar;
 	private Integer isDelete;
 
+	@Override
+	public String toString() {
+		return "User{" +
+				"uid=" + uid +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", salt='" + salt + '\'' +
+				", phone='" + phone + '\'' +
+				", email='" + email + '\'' +
+				", gender=" + gender +
+				", avatar='" + avatar + '\'' +
+				", isDelete=" + isDelete +
+				'}';
+	}
+
 	public Integer getUid() {
 		return uid;
 	}

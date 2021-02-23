@@ -201,6 +201,9 @@ public class UserServiceImpl implements UserService {
 		user.setModifiedUser(username);
 		// 向参数user中补全：modifiedTime > new Date()
 		user.setModifiedTime(new Date());
+		user.setPhone(phone);
+		user.setEmail(email);
+		user.setGender(gender);
 		// 基于参数user调用持久层的updateInfoByUid()执行修改，获取返回值
 		Integer rows = userMapper.updateInfoByUid(user);
 		// 判断返回值(受影响行的行数)是否不为1
