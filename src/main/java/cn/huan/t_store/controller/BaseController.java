@@ -7,6 +7,8 @@ package cn.huan.t_store.controller;
  */
 abstract class BaseController {
 	protected static final String OK="2000";
+
+	protected Integer result = 0;
 	
 //  还可以将每次从session中取出uid和username的方法封装在基类中
 //	protected String getUidSession(HttpSession session) {

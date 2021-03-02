@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,9 +35,18 @@ public class UserController extends BaseController{
 
 	@Autowired
 	private UserService userService;  //只有一份且不会改变
+
+//	@GetMapping("test")
+////	@Scheduled(cron = "0/4 * * * * ?")
+////	public Integer test() {
+////		result++;
+////		System.err.println(result);
+////		return result;
+////	}
+
 		
 	@RequestMapping("reg")
-	public JsonResult<Void> reg(User user) {    //因为不需要返回任何数据，所以写Void	
+	public JsonResult<Void> reg(User user) {    //因为不需要返回任何数据，所以写Void
 		System.out.println("UserController.reg()");
 		System.err.println(user);
 		userService.reg(user);

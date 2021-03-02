@@ -27,7 +27,7 @@
 		ORDER BY 
 			created_time DESC 
 		LIMIT 
-			0,10
+			0,4
 	</select>
 
 	<select id="findHotSort" resultMap="ProductEntity">
@@ -40,7 +40,7 @@
 		ORDER BY
 			priority DESC
 		LIMIT
-			0,10
+			0,4
 	</select>
 	
 	
