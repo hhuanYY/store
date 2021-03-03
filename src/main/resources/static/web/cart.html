@@ -167,9 +167,9 @@
 							</table>
 							<div class="total-bar">
 								<a href="javascript:selDelCart()" class="cart-del-sel btn btn-default btn-xs">删除所选商品</a>
-								<span class="pull-right">已选商品
-								<span id="selectCount">0</span>件 总价¥
-								<span id="selectTotal">0</span>元
+								<span class="pull-right">购物车包含商品
+									<span id="allNum">0</span> 件， 总价¥
+									<span id="allPrice">0</span> 元
 								</span>
 							</div>
 							<div>
@@ -222,6 +222,8 @@
 				"type":"get",
 				"dataType":"json",
 				"success":function(json){
+					let allNum = 0;
+					let allPrice = 0;
 					for(let i=0; i < json.data.length; i++){
 						
 						let html=
@@ -250,9 +252,14 @@
 						html = html.replace(/#{realPrice}/g,json.data[i].realPrice);
 						html = html.replace(/#{num}/g,json.data[i].num);
 						html = html.replace(/#{totlePrice}/g,json.data[i].realPrice*json.data[i].num);
-						
+
+						allNum += json.data[i].num;
+						allPrice += json.data[i].realPrice * json.data[i].num;
+
 						$("#carts-list").append(html);
 					}
+					$("#allNum").html(allNum);
+					$("#allPrice").html(allPrice);
 				}
 			});
 		}
@@ -318,10 +325,9 @@
 				}
 			});
 		}
-		
+
 		</script>
-		
-			
+
 	</body>
 
 </html>
