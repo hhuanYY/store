@@ -5,11 +5,11 @@ import cn.huan.t_store.entity.User;
 import cn.huan.t_store.service.ShareService;
 import cn.huan.t_store.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -26,7 +26,7 @@ public class ShareController extends BaseController {
 
     /**
      * 新增分享
-     * @param proId 商品id
+     * @param proId    商品id
      * @param username 用户名
      * @param session
      * @return
@@ -42,7 +42,6 @@ public class ShareController extends BaseController {
 
     /**
      * 展示分享
-     *
      * @param session
      * @return
      */
@@ -59,8 +58,17 @@ public class ShareController extends BaseController {
      * @return
      */
     @RequestMapping("showUsername")
-    public JsonResult<List<User>> listUsername() {
+    public JsonResult<List<User>> listUsername(HttpSession session) {
+        String username = session.getAttribute("username").toString();
         List<User> date = shareService.listUser();
+        Iterator<User> iterator = date.iterator();
+        while (iterator.hasNext()) {
+            User next = iterator.next();
+            if (next.getUsername().equals(username)) {
+                iterator.remove();
+                break;
+            }
+        }
         return new JsonResult<>(OK, date);
     }
 }
