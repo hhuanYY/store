@@ -26,7 +26,11 @@
 			s.sharetime DESC
 	</select>
 
-</mapper>
+	<select id="listUsername" resultType="cn.huan.t_store.entity.User">
+		SELECT username FROM t_user;
+	</select>
+
+ </mapper>
 
 
 

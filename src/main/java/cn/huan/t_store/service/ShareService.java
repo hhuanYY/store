@@ -1,6 +1,7 @@
 package cn.huan.t_store.service;
 
 import cn.huan.t_store.entity.ShareVO;
+import cn.huan.t_store.entity.User;
 
 import java.util.List;
 
@@ -26,4 +27,11 @@ public interface ShareService {
      * @return
      */
     List<ShareVO> listShares(Integer uid);
+
+
+    /**
+     * 显示用户好友
+     * @return
+     */
+    List<User> listUser();
 }

@@ -168,9 +168,16 @@
 										<form id="formData" class="form-horizontal">
 											<div class="modal-body">
 												<div class="form-group">
-													<div class="col-lg-12">
-														<input id="username_share" type="text" value="" placeholder="请输入好友名称" class="form-control"></br>
-													</div>
+<!--													<div class="col-lg-12">-->
+<!--														<input id="username_share" type="text" value="" placeholder="请输入好友名称" class="form-control"></br>-->
+<!--													</div>-->
+
+													<select name="aid" id="username-list" class="form-control">
+														<option >八戒&nbsp;&nbsp;&nbsp;家&nbsp;&nbsp;&nbsp;北京市房山区高老庄3排6号&nbsp;&nbsp;&nbsp;1380***1234</option>
+														<option>八戒&nbsp;&nbsp;&nbsp;公司&nbsp;&nbsp;&nbsp;北京市海淀区中关村中路1号1001室&nbsp;&nbsp;&nbsp;1380***1234</option>
+														<option>八戒&nbsp;&nbsp;&nbsp;宿舍&nbsp;&nbsp;&nbsp;北京市海淀区永丰镇30号&nbsp;&nbsp;&nbsp;1380***1234</option>
+													</select>
+
 												</div>
 											</div>
 
@@ -283,9 +290,30 @@
 				//调用JS文件中的方法，获取到网址上id具体的值 
 				id = $.getUrlParam("id");
 				showOne();
+
+				showUsernameList();
 			});
-			
-			
+
+
+			// 分享好友列表.
+			function showUsernameList() {
+				$("#username-list").empty();
+				$.ajax({
+					"url":"/share/showUsername",
+					"type":"get",
+					"dataType":"json",
+					"success":function(json) {
+						for (let i = 0; i < json.data.length; i++) {
+							let html = '<option value="#{name}"> #{name} </option>';
+							html = html.replace(/#{name}/g, json.data[i].username);
+
+							$("#username-list").append(html);
+						}
+					}
+				});
+			}
+
+
 			// TODO  id从哪里来 ： 商品详情的id应该是在用户浏览主页时点击某个商品详情时立即传过来的 
 			  // 因此在 index.html改造为 ：
 			  // 因为在主页上点击标题为超链接，并在后面添加 ?id=#{id}， 并在后续中将#{id}替换成每一个商品对应的id,在点击后传给下一个页面
@@ -353,13 +381,17 @@
 			/* 好物分享 */
 			$("#btn-share").click(function() {
 				// 获取用户输入的数据
-				let usernameShare = $("#username_share").val();
+				// let usernameShare = $("#username_list").text();
+
+				var option = $("#username-list option:selected").val();
+				console.log(option);
+
 
 				$.ajax({
 					"url":"/share/add",
 					"data":{
 						"proId":id,
-						"username":usernameShare
+						"username":option
 					},
 					"type":"post",
 					"dataType":"json",
