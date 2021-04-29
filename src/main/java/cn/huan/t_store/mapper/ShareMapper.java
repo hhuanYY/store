@@ -2,6 +2,7 @@ package cn.huan.t_store.mapper;
 
 import cn.huan.t_store.entity.Share;
 import cn.huan.t_store.entity.ShareVO;
+import cn.huan.t_store.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
@@ -29,5 +30,13 @@ public interface ShareMapper {
      * @return
      */
     List<ShareVO> listShares(Integer uid);
+
+
+    /**
+     * 查询姓名
+     * @return 结果集
+     */
+    List<User> listUsername();
+
 
 }

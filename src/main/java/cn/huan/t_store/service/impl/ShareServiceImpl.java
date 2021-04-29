@@ -76,4 +76,17 @@ public class ShareServiceImpl implements ShareService {
         return shareVOS;
     }
 
+
+    /**
+     * 显示用户好友
+     * @return
+     */
+    @Override
+    public List<User> listUser() {
+        List<User> list = shareMapper.listUsername();
+        if (CollectionUtils.isEmpty(list)) {
+            throw new UserNotFoundException("无好友分享！");
+        }
+        return list;
+    }
 }

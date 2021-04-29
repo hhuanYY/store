@@ -1,6 +1,7 @@
 package cn.huan.t_store.controller;
 
 import cn.huan.t_store.entity.ShareVO;
+import cn.huan.t_store.entity.User;
 import cn.huan.t_store.service.ShareService;
 import cn.huan.t_store.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,8 @@ public class ShareController extends BaseController {
 
     /**
      * 新增分享
-     * @param proId 商品id
+     *
+     * @param proId    商品id
      * @param username 用户名
      * @param session
      * @return
@@ -41,6 +43,7 @@ public class ShareController extends BaseController {
 
     /**
      * 展示分享
+     *
      * @param session
      * @return
      */
@@ -48,6 +51,17 @@ public class ShareController extends BaseController {
     public JsonResult<List<ShareVO>> listShare(HttpSession session) {
         Integer uid = Integer.valueOf(session.getAttribute("uid").toString());
         List<ShareVO> date = shareService.listShares(uid);
+        return new JsonResult<>(OK, date);
+    }
+
+
+    /**
+     * 显示好友用户
+     * @return
+     */
+    @RequestMapping("showUsername")
+    public JsonResult<List<User>> listUsername() {
+        List<User> date = shareService.listUser();
         return new JsonResult<>(OK, date);
     }
 }

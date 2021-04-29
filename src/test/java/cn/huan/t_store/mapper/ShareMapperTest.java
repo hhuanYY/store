@@ -2,6 +2,8 @@ package cn.huan.t_store.mapper;
 
 import cn.huan.t_store.entity.Share;
 import cn.huan.t_store.entity.ShareVO;
+import cn.huan.t_store.entity.User;
+import cn.huan.t_store.service.ShareService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,9 @@ public class ShareMapperTest {
     @Autowired
     private ShareMapper shareMapper ;
 
+    @Autowired
+    private ShareService shareService;
+
     @Test
     public void shareAdd() {
         Share share = new Share();
@@ -39,6 +44,12 @@ public class ShareMapperTest {
     public void listShow() {
         List<ShareVO> shareVOS = shareMapper.listShares(7);
         System.err.println(shareVOS);
+    }
+
+    @Test
+    public void listUser() {
+        List<User> users = shareService.listUser();
+        System.err.println(users);
     }
 
 }
