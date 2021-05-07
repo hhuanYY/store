@@ -20,4 +20,12 @@ public interface FriendMapper {
             @Param("uid") Integer uid,
             @Param("friendname") String friendname,
             @Param("friendship") String friendship);
+
+    /**
+     * 根据用户名获取某个对象
+     * @param name
+     * @return
+     */
+    Friend getFriend(String name);
+
 }

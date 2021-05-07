@@ -8,6 +8,7 @@ import cn.huan.t_store.service.FriendService;
 import cn.huan.t_store.service.UserService;
 import cn.huan.t_store.service.ex.UserNotFoundException;
 import cn.huan.t_store.service.ex.UserNotMatchingException;
+import cn.huan.t_store.service.ex.UsernameDuplicateException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,9 +30,16 @@ public class FriendServiceImpl implements FriendService {
 
     @Override
     public void insertFriend(Integer uid, String friendname, String friendship) {
+        // 好友不存在
         User result = userMapper.findByUsername(friendname);
         if (result == null) {
-            throw new UserNotFoundException("该用户不存在，请重新输入...");
+            throw new UserNotFoundException("该用户不存在，请重新输入！");
+        }
+
+        // 已经存在好友
+        Friend friend = friendMapper.getFriend(friendname);
+        if (friend != null) {
+            throw new UsernameDuplicateException("好友已经存在，请不要重复添加！");
         }
 
         Integer integer = friendMapper.insertFriend(uid, friendname, friendship);

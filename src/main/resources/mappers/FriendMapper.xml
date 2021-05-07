@@ -12,6 +12,12 @@
 		)
 	</insert>
 
+
+	<select id="getFriend" resultType="cn.huan.t_store.entity.Friend">
+		SELECT * FROM t_friend WHERE friendname = #{name};
+	</select>
+
+
 <!--	<select id="listShares" resultType="cn.huan.t_store.entity.ShareVO">-->
 <!--		SELECT-->
 <!--			p.title,p.price,p.image,s.sharer,s.sharetime-->
@@ -25,9 +31,7 @@
 <!--			s.sharetime DESC-->
 <!--	</select>-->
 
-<!--	<select id="listUsername" resultType="cn.huan.t_store.entity.User">-->
-<!--		SELECT username FROM t_user;-->
-<!--	</select>-->
+
 
  </mapper>
 
