@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.huan.t_store.mapper.FriendMapper">
+
+	<insert id="insertFriend">
+		INSERT INTO t_friend(
+			uid, friendname, friendship
+		) VALUES (
+			#{uid},#{friendname}, #{friendship}
+		)
+	</insert>
+
+<!--	<select id="listShares" resultType="cn.huan.t_store.entity.ShareVO">-->
+<!--		SELECT-->
+<!--			p.title,p.price,p.image,s.sharer,s.sharetime-->
+<!--		FROM-->
+<!--			t_share AS s-->
+<!--		JOIN-->
+<!--			t_product AS p ON s.proid = p.id-->
+<!--		WHERE-->
+<!--			uid = #{uid}-->
+<!--		ORDER BY-->
+<!--			s.sharetime DESC-->
+<!--	</select>-->
+
+<!--	<select id="listUsername" resultType="cn.huan.t_store.entity.User">-->
+<!--		SELECT username FROM t_user;-->
+<!--	</select>-->
+
+ </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
