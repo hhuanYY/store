@@ -1,5 +1,6 @@
 package cn.huan.t_store.service.impl;
 
+import cn.huan.t_store.entity.Friend;
 import cn.huan.t_store.entity.Share;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.entity.User;
@@ -82,8 +83,8 @@ public class ShareServiceImpl implements ShareService {
      * @return
      */
     @Override
-    public List<User> listUser() {
-        List<User> list = shareMapper.listUsername();
+    public List<Friend> listUser(Integer uid) {
+        List<Friend> list = shareMapper.listUsername(uid);
         if (CollectionUtils.isEmpty(list)) {
             throw new UserNotFoundException("无好友分享！");
         }

@@ -314,6 +314,7 @@
 						// 仅当HTTP响应是2xx，才执行success的回调函数
 						if (json.state == "2000") {
 							alert("添加好友成功！");
+							window.location.href = "index.html";
 						} else {
 							alert(json.message);
 						}

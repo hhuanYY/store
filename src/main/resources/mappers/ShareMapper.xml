@@ -26,8 +26,8 @@
 			s.sharetime DESC
 	</select>
 
-	<select id="listUsername" resultType="cn.huan.t_store.entity.User">
-		SELECT username FROM t_user;
+	<select id="listUsername" resultType="cn.huan.t_store.entity.Friend">
+		SELECT DISTINCT friendname FROM t_friend WHERE uid = #{uid};
 	</select>
 
  </mapper>

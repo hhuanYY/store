@@ -57,10 +57,5 @@ public class ShareMapperTest {
         System.err.println(shareVOS);
     }
 
-    @Test
-    public void listUser() {
-        List<User> users = shareService.listUser();
-        System.err.println(users);
-    }
 
 }

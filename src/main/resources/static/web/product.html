@@ -308,7 +308,7 @@
 					"success":function(json) {
 						for (let i = 0; i < json.data.length; i++) {
 							let html = '<option value="#{name}"> #{name} </option>';
-							html = html.replace(/#{name}/g, json.data[i].username);
+							html = html.replace(/#{name}/g, json.data[i].friendname);
 
 							$("#username-list").append(html);
 						}

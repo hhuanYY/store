@@ -41,6 +41,12 @@ public class ShareServiceTest {
     }
 
     @Test
+    public void shows() {
+        List<Friend> friends = shareService.listUser(1);
+        System.err.println(friends);
+    }
+
+    @Test
     public void share() {
         shareService.insertShare(10000088, "root", "HANHAN", 7);
     }
