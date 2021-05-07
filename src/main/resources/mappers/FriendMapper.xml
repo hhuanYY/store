@@ -14,7 +14,7 @@
 
 
 	<select id="getFriend" resultType="cn.huan.t_store.entity.Friend">
-		SELECT * FROM t_friend WHERE friendname = #{name};
+		SELECT * FROM t_friend WHERE friendname = #{name} AND uid = #{uid};
 	</select>
 
 

@@ -26,6 +26,8 @@ public interface FriendMapper {
      * @param name
      * @return
      */
-    Friend getFriend(String name);
+    Friend getFriend(
+            @Param("name") String name,
+            @Param("uid") Integer uid);
 
 }

@@ -35,12 +35,6 @@ public class ShareMapperTest {
 
 
     @Test
-    public void getFriend() {
-        Friend yuanyinhuan = friendMapper.getFriend("yuanyinhuan");
-        System.err.println(yuanyinhuan);
-    }
-
-    @Test
     public void friendAdd() {
         Integer integer = friendMapper.insertFriend(150,"xxx","爱人");
         System.err.println(integer);

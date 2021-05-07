@@ -37,7 +37,7 @@ public class FriendServiceImpl implements FriendService {
         }
 
         // 已经存在好友
-        Friend friend = friendMapper.getFriend(friendname);
+        Friend friend = friendMapper.getFriend(friendname,uid);
         if (friend != null) {
             throw new UsernameDuplicateException("好友已经存在，请不要重复添加！");
         }
