@@ -1,6 +1,7 @@
 package cn.huan.t_store.service;
 
 import cn.huan.t_store.entity.BuyNow;
+import cn.huan.t_store.entity.Friend;
 import cn.huan.t_store.entity.Product;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.mapper.ProductMapper;
@@ -29,6 +30,15 @@ public class ShareServiceTest {
 
     @Autowired
     private BuyNowService buyNowService;
+
+    @Autowired
+    private FriendService friendService;
+
+    @Test
+    public void addFri() {
+        friendService.insertFriend(200,"root","gx");
+        System.err.println("OK");
+    }
 
     @Test
     public void share() {
