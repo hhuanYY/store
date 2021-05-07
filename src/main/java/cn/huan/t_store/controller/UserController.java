@@ -36,13 +36,17 @@ public class UserController extends BaseController{
 	@Autowired
 	private UserService userService;  //只有一份且不会改变
 
-//	@GetMapping("test")
-////	@Scheduled(cron = "0/4 * * * * ?")
-////	public Integer test() {
-////		result++;
-////		System.err.println(result);
-////		return result;
-////	}
+
+	/**
+	 * 	显示当前用户
+	 */
+	@RequestMapping("showUser")
+	public JsonResult<User> showUser(HttpSession session) {
+		User user = new User();
+		String username = session.getAttribute("username").toString();
+		user.setUsername(username);
+		return new JsonResult<>(OK, user);
+	}
 
 		
 	@RequestMapping("reg")

@@ -4,11 +4,11 @@ var reqpath = "search.html"
 var typelist = [{
 		"id": "1",
 		"parentId": "0",
-		"name": "图书音像"
+		"name": "电脑专区"
 	}, {
 		"id": "2",
 		"parentId": "0",
-		"name": "家用电器"
+		"name": "数码电视"
 	}, {
 		"id": "3",
 		"parentId": "0",
@@ -16,71 +16,71 @@ var typelist = [{
 	}, {
 		"id": "4",
 		"parentId": "0",
-		"name": "个护化妆"
+		"name": "蓝牙产品"
 	}, {
 		"id": "5",
 		"parentId": "0",
-		"name": "钟表"
+		"name": "电子玩具"
 	}, {
 		"id": "6",
 		"parentId": "0",
-		"name": "母婴"
+		"name": "电子礼品"
 	}, {
 		"id": "7",
 		"parentId": "0",
-		"name": "食品饮料"
+		"name": "家用电器"
 	}, {
 		"id": "8",
 		"parentId": "0",
-		"name": "汽车用品"
+		"name": "娱乐产品"
 	}, {
 		"id": "9",
 		"parentId": "0",
-		"name": "玩具乐器"
+		"name": "各种灯具"
 	}, {
 		"id": "10",
 		"parentId": "0",
-		"name": "手机"
+		"name": "运动手环"
 	}, {
 		"id": "11",
 		"parentId": "0",
-		"name": "数码"
+		"name": "常用乐器"
 	}, {
 		"id": "12",
 		"parentId": "0",
-		"name": "家居家装"
+		"name": "运动耳机"
 	}, {
 		"id": "13",
 		"parentId": "0",
-		"name": "厨具"
+		"name": "电脑整机"
 	}, {
 		"id": "14",
 		"parentId": "0",
-		"name": "服饰内衣"
+		"name": "扬声器"
 	}, {
 		"id": "15",
 		"parentId": "0",
-		"name": "鞋靴"
+		"name": "电子书"
 	}, {
 		"id": "16",
 		"parentId": "0",
-		"name": "礼品箱包"
+		"name": "游戏机"
 	}, {
 		"id": "17",
 		"parentId": "0",
-		"name": "珠宝"
+		"name": "充电器"
 	}, {
 		"id": "18",
 		"parentId": "0",
-		"name": "运动健康"
+		"name": "手机"
 	}, {
 		"id": "19",
 		"parentId": "0",
-		"name": "充值票务"
+		"name": "LED"
 	}, {
 		"id": "20",
 		"parentId": "3",
-		"name": "电脑整机"
+		"name": ""
 	}, {
 		"id": "21",
 		"parentId": "3",
@@ -111,32 +111,46 @@ var typelist = [{
 		"name": "笔记本"
 	}, {
 		"id": "28",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "超极本"
 	}, {
 		"id": "29",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "游戏本"
 	}, {
 		"id": "30",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "平板电脑"
 	}, {
 		"id": "31",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "平板电脑配件"
 	}, {
 		"id": "32",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "台式机"
 	}, {
 		"id": "33",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "服务器工作站"
 	}, {
 		"id": "34",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "笔记本配件"
+	},{
+		"id": "35",
+		"parentId": "2",
+		"name": "华为电视"
+	},
+	{
+		"id": "36",
+		"parentId": "2",
+		"name": "联想电视"
+	},
+	{
+		"id": "37",
+		"parentId": "2",
+		"name": "戴尔电视"
 	},
 ]
 //加载json数据的到一级分类的方法
