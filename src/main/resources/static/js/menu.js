@@ -16,15 +16,15 @@ var typelist = [{
 	}, {
 		"id": "4",
 		"parentId": "0",
-		"name": "蓝牙产品"
+		"name": "汽车电子产品"
 	}, {
 		"id": "5",
 		"parentId": "0",
-		"name": "电子玩具"
+		"name": "创新技术产品"
 	}, {
 		"id": "6",
 		"parentId": "0",
-		"name": "电子礼品"
+		"name": "摄影器材"
 	}, {
 		"id": "7",
 		"parentId": "0",
@@ -48,35 +48,35 @@ var typelist = [{
 	}, {
 		"id": "12",
 		"parentId": "0",
-		"name": "运动耳机"
+		"name": "视频产品"
 	}, {
 		"id": "13",
 		"parentId": "0",
-		"name": "电脑整机"
+		"name": "个人电脑"
 	}, {
 		"id": "14",
 		"parentId": "0",
-		"name": "扬声器"
+		"name": "办公设备"
 	}, {
 		"id": "15",
 		"parentId": "0",
-		"name": "电子书"
+		"name": "家电产品"
 	}, {
 		"id": "16",
 		"parentId": "0",
-		"name": "游戏机"
+		"name": "游戏产品"
 	}, {
 		"id": "17",
 		"parentId": "0",
-		"name": "充电器"
+		"name": "通讯设备"
 	}, {
 		"id": "18",
 		"parentId": "0",
-		"name": "手机"
+		"name": "人工智能"
 	}, {
 		"id": "19",
 		"parentId": "0",
-		"name": "LED"
+		"name": "虚拟产品"
 	}, {
 		"id": "20",
 		"parentId": "3",
@@ -151,6 +151,76 @@ var typelist = [{
 		"id": "37",
 		"parentId": "2",
 		"name": "戴尔电视"
+	},
+	{
+		"id": "38",
+		"parentId": "4",
+		"name": "导航产品"
+	},
+	{
+		"id": "39",
+		"parentId": "4",
+		"name": "电源"
+	},
+	{
+		"id": "40",
+		"parentId": "4",
+		"name": "电池"
+	},
+	{
+		"id": "41",
+		"parentId": "5",
+		"name": "可穿戴设备"
+	},
+	{
+		"id": "42",
+		"parentId": "5",
+		"name": "3D打印机"
+	},
+	{
+		"id": "43",
+		"parentId": "5",
+		"name": "电子商务"
+	},
+	{
+		"id": "44",
+		"parentId": "6",
+		"name": "数码相机"
+	},
+	{
+		"id": "45",
+		"parentId": "6",
+		"name": "摄像机"
+	},
+	{
+		"id": "46",
+		"parentId": "6",
+		"name": "激光照排"
+	},
+	{
+		"id": "47",
+		"parentId": "6",
+		"name": "扫描议"
+	},
+	{
+		"id": "48",
+		"parentId": "7",
+		"name": "冰箱"
+	},
+	{
+		"id": "49",
+		"parentId": "7",
+		"name": "空调"
+	},
+	{
+		"id": "50",
+		"parentId": "7",
+		"name": "微波炉"
+	},
+	{
+		"id": "51",
+		"parentId": "7",
+		"name": "吹风机"
 	},
 ]
 //加载json数据的到一级分类的方法
