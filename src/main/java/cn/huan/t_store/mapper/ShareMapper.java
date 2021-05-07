@@ -1,5 +1,6 @@
 package cn.huan.t_store.mapper;
 
+import cn.huan.t_store.entity.Friend;
 import cn.huan.t_store.entity.Share;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.entity.User;
@@ -36,7 +37,7 @@ public interface ShareMapper {
      * 查询姓名
      * @return 结果集
      */
-    List<User> listUsername();
+    List<Friend> listUsername(Integer uid);
 
 
 }

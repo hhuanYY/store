@@ -1,5 +1,6 @@
 package cn.huan.t_store.service;
 
+import cn.huan.t_store.entity.Friend;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.entity.User;
 
@@ -33,5 +34,5 @@ public interface ShareService {
      * 显示用户好友
      * @return
      */
-    List<User> listUser();
+    List<Friend> listUser(Integer uid);
 }

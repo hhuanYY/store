@@ -1,5 +1,6 @@
 package cn.huan.t_store.controller;
 
+import cn.huan.t_store.entity.Friend;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.entity.User;
 import cn.huan.t_store.service.ShareService;
@@ -58,17 +59,9 @@ public class ShareController extends BaseController {
      * @return
      */
     @RequestMapping("showUsername")
-    public JsonResult<List<User>> listUsername(HttpSession session) {
-        String username = session.getAttribute("username").toString();
-        List<User> date = shareService.listUser();
-        Iterator<User> iterator = date.iterator();
-        while (iterator.hasNext()) {
-            User next = iterator.next();
-            if (next.getUsername().equals(username)) {
-                iterator.remove();
-                break;
-            }
-        }
+    public JsonResult<List<Friend>> listUsername(HttpSession session) {
+        Integer uid = Integer.valueOf(session.getAttribute("uid").toString());
+        List<Friend> date = shareService.listUser(uid);
         return new JsonResult<>(OK, date);
     }
 }

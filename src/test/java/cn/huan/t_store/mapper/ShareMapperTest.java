@@ -1,5 +1,6 @@
 package cn.huan.t_store.mapper;
 
+import cn.huan.t_store.entity.Friend;
 import cn.huan.t_store.entity.Share;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.entity.User;
@@ -29,6 +30,16 @@ public class ShareMapperTest {
     @Autowired
     private ShareService shareService;
 
+    @Autowired
+    private FriendMapper friendMapper;
+
+
+    @Test
+    public void friendAdd() {
+        Integer integer = friendMapper.insertFriend(150,"xxx","爱人");
+        System.err.println(integer);
+    }
+
     @Test
     public void shareAdd() {
         Share share = new Share();
@@ -46,10 +57,5 @@ public class ShareMapperTest {
         System.err.println(shareVOS);
     }
 
-    @Test
-    public void listUser() {
-        List<User> users = shareService.listUser();
-        System.err.println(users);
-    }
 
 }

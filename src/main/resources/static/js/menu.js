@@ -4,11 +4,11 @@ var reqpath = "search.html"
 var typelist = [{
 		"id": "1",
 		"parentId": "0",
-		"name": "图书音像"
+		"name": "电脑专区"
 	}, {
 		"id": "2",
 		"parentId": "0",
-		"name": "家用电器"
+		"name": "数码电视"
 	}, {
 		"id": "3",
 		"parentId": "0",
@@ -16,71 +16,71 @@ var typelist = [{
 	}, {
 		"id": "4",
 		"parentId": "0",
-		"name": "个护化妆"
+		"name": "汽车电子产品"
 	}, {
 		"id": "5",
 		"parentId": "0",
-		"name": "钟表"
+		"name": "创新技术产品"
 	}, {
 		"id": "6",
 		"parentId": "0",
-		"name": "母婴"
+		"name": "摄影器材"
 	}, {
 		"id": "7",
 		"parentId": "0",
-		"name": "食品饮料"
+		"name": "家用电器"
 	}, {
 		"id": "8",
 		"parentId": "0",
-		"name": "汽车用品"
+		"name": "娱乐产品"
 	}, {
 		"id": "9",
 		"parentId": "0",
-		"name": "玩具乐器"
+		"name": "各种灯具"
 	}, {
 		"id": "10",
 		"parentId": "0",
-		"name": "手机"
+		"name": "运动手环"
 	}, {
 		"id": "11",
 		"parentId": "0",
-		"name": "数码"
+		"name": "常用乐器"
 	}, {
 		"id": "12",
 		"parentId": "0",
-		"name": "家居家装"
+		"name": "视频产品"
 	}, {
 		"id": "13",
 		"parentId": "0",
-		"name": "厨具"
+		"name": "个人电脑"
 	}, {
 		"id": "14",
 		"parentId": "0",
-		"name": "服饰内衣"
+		"name": "办公设备"
 	}, {
 		"id": "15",
 		"parentId": "0",
-		"name": "鞋靴"
+		"name": "家电产品"
 	}, {
 		"id": "16",
 		"parentId": "0",
-		"name": "礼品箱包"
+		"name": "游戏产品"
 	}, {
 		"id": "17",
 		"parentId": "0",
-		"name": "珠宝"
+		"name": "通讯设备"
 	}, {
 		"id": "18",
 		"parentId": "0",
-		"name": "运动健康"
+		"name": "人工智能"
 	}, {
 		"id": "19",
 		"parentId": "0",
-		"name": "充值票务"
+		"name": "虚拟产品"
 	}, {
 		"id": "20",
 		"parentId": "3",
-		"name": "电脑整机"
+		"name": ""
 	}, {
 		"id": "21",
 		"parentId": "3",
@@ -111,32 +111,116 @@ var typelist = [{
 		"name": "笔记本"
 	}, {
 		"id": "28",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "超极本"
 	}, {
 		"id": "29",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "游戏本"
 	}, {
 		"id": "30",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "平板电脑"
 	}, {
 		"id": "31",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "平板电脑配件"
 	}, {
 		"id": "32",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "台式机"
 	}, {
 		"id": "33",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "服务器工作站"
 	}, {
 		"id": "34",
-		"parentId": "20",
+		"parentId": "1",
 		"name": "笔记本配件"
+	},{
+		"id": "35",
+		"parentId": "2",
+		"name": "华为电视"
+	},
+	{
+		"id": "36",
+		"parentId": "2",
+		"name": "联想电视"
+	},
+	{
+		"id": "37",
+		"parentId": "2",
+		"name": "戴尔电视"
+	},
+	{
+		"id": "38",
+		"parentId": "4",
+		"name": "导航产品"
+	},
+	{
+		"id": "39",
+		"parentId": "4",
+		"name": "电源"
+	},
+	{
+		"id": "40",
+		"parentId": "4",
+		"name": "电池"
+	},
+	{
+		"id": "41",
+		"parentId": "5",
+		"name": "可穿戴设备"
+	},
+	{
+		"id": "42",
+		"parentId": "5",
+		"name": "3D打印机"
+	},
+	{
+		"id": "43",
+		"parentId": "5",
+		"name": "电子商务"
+	},
+	{
+		"id": "44",
+		"parentId": "6",
+		"name": "数码相机"
+	},
+	{
+		"id": "45",
+		"parentId": "6",
+		"name": "摄像机"
+	},
+	{
+		"id": "46",
+		"parentId": "6",
+		"name": "激光照排"
+	},
+	{
+		"id": "47",
+		"parentId": "6",
+		"name": "扫描议"
+	},
+	{
+		"id": "48",
+		"parentId": "7",
+		"name": "冰箱"
+	},
+	{
+		"id": "49",
+		"parentId": "7",
+		"name": "空调"
+	},
+	{
+		"id": "50",
+		"parentId": "7",
+		"name": "微波炉"
+	},
+	{
+		"id": "51",
+		"parentId": "7",
+		"name": "吹风机"
 	},
 ]
 //加载json数据的到一级分类的方法
