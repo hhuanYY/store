@@ -1,9 +1,6 @@
 package cn.huan.t_store.mapper;
 
-import cn.huan.t_store.entity.Friend;
-import cn.huan.t_store.entity.Share;
-import cn.huan.t_store.entity.ShareVO;
-import cn.huan.t_store.entity.User;
+import cn.huan.t_store.entity.*;
 import cn.huan.t_store.service.ShareService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +29,24 @@ public class ShareMapperTest {
 
     @Autowired
     private FriendMapper friendMapper;
+
+    @Autowired
+    private LogMapper logMapper;
+
+
+    @Test
+    public void insertLog() {
+        try {
+            Log log = new Log();
+            log.setUsername("XJH");
+            log.setUrl("http://localhost:8081/");
+            log.setTimes(new Date());
+            logMapper.insertLog(log);
+            System.err.println("OK");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
     @Test
