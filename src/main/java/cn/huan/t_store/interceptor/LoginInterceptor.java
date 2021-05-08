@@ -43,7 +43,6 @@ public class LoginInterceptor implements HandlerInterceptor {
 	 */
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-		String result = "http://localhost:9011/web/index.html";
 		HttpSession session = request.getSession();
 		Log log = new Log();
 		String username = session.getAttribute("username").toString();
@@ -51,10 +50,6 @@ public class LoginInterceptor implements HandlerInterceptor {
 		log.setUsername(username);
 		log.setUrl(url);
 		log.setTimes(new Date());
-		if (result.equals(url)) {
-			return;
-		}
-
 		try {
 			if (logServiceImpl == null) {
 				BeanFactory factory = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getServletContext());

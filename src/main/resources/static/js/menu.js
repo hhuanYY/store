@@ -41,27 +41,19 @@ var typelist = [{
 		"id": "10",
 		"parentId": "0",
 		"name": "运动手环"
-	}, {
-		"id": "11",
-		"parentId": "0",
-		"name": "常用乐器"
-	}, {
+	},
+
+	{
 		"id": "12",
 		"parentId": "0",
 		"name": "视频产品"
-	}, {
-		"id": "13",
-		"parentId": "0",
-		"name": "个人电脑"
-	}, {
+	},
+	{
 		"id": "14",
 		"parentId": "0",
 		"name": "办公设备"
-	}, {
-		"id": "15",
-		"parentId": "0",
-		"name": "家电产品"
-	}, {
+	},
+	{
 		"id": "16",
 		"parentId": "0",
 		"name": "游戏产品"
