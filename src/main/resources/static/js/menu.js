@@ -33,16 +33,12 @@ var typelist = [{
 		"id": "8",
 		"parentId": "0",
 		"name": "娱乐产品"
-	}, {
+	},
+	{
 		"id": "9",
 		"parentId": "0",
 		"name": "各种灯具"
-	}, {
-		"id": "10",
-		"parentId": "0",
-		"name": "运动手环"
 	},
-
 	{
 		"id": "12",
 		"parentId": "0",
