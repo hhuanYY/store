@@ -3,6 +3,7 @@ package cn.huan.t_store.mapper;
 import java.util.List;
 
 import cn.huan.t_store.entity.Product;
+import org.apache.ibatis.annotations.Param;
 
 
 public interface ProductMapper {
@@ -28,6 +29,20 @@ public interface ProductMapper {
 	 * @return
 	 */
 	Product findById(Integer id);
+
+
+	/**
+	 * 查询产品列表
+	 * @param id1
+	 * @param id2
+	 * @param id3
+	 * @return
+	 */
+	List<Product> listByids(
+			@Param("id1") Integer id1,
+			@Param("id2") Integer id2,
+			@Param("id3") Integer id3);
+
 
 	/**
 	 * 模糊查询商品列表

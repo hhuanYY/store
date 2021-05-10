@@ -19,6 +19,19 @@ public class Product extends BaseEntity {
 	private String image;
 	private Integer status;
 	private Integer priority;
+	private Integer clickNum;
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Integer getClickNum() {
+		return clickNum;
+	}
+
+	public void setClickNum(Integer clickNum) {
+		this.clickNum = clickNum;
+	}
 
 	public Integer getId() {
 		return id;
@@ -127,9 +140,18 @@ public class Product extends BaseEntity {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", categoryId=" + categoryId + ", itemType=" + itemType + ", title=" + title
-				+ ", sellPoint=" + sellPoint + ", price=" + price + ", num=" + num + ", image=" + image + ", status="
-				+ status + ", priority=" + priority + ", toString()=" + super.toString() + "]";
+		return "Product{" +
+				"id=" + id +
+				", categoryId=" + categoryId +
+				", itemType='" + itemType + '\'' +
+				", title='" + title + '\'' +
+				", sellPoint='" + sellPoint + '\'' +
+				", price=" + price +
+				", num=" + num +
+				", image='" + image + '\'' +
+				", status=" + status +
+				", priority=" + priority +
+				", clickNum=" + clickNum +
+				"} " + super.toString();
 	}
-
 }

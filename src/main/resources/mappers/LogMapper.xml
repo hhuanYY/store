@@ -6,16 +6,11 @@
 
 	<insert id="insertLog">
 		INSERT INTO t_log(
-			username, url, times
+			username, url, times, pid
 		) VALUES (
-			#{username}, #{url}, #{times}
+			#{username}, #{url}, #{times}, #{pid}
 		)
 	</insert>
-
-
-
-
-
 
 
  </mapper>

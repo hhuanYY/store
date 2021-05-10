@@ -1,8 +1,8 @@
 package cn.huan.t_store.service;
 
 import cn.huan.t_store.entity.Friend;
+import cn.huan.t_store.entity.Product;
 import cn.huan.t_store.entity.ShareVO;
-import cn.huan.t_store.entity.User;
 
 import java.util.List;
 
@@ -35,4 +35,11 @@ public interface ShareService {
      * @return
      */
     List<Friend> listUser(Integer uid);
+
+
+    /**
+     * 热销产品
+     * @return
+     */
+    List<Product> listHotProduct();
 }

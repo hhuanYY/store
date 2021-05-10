@@ -35,9 +35,9 @@
 				<!--快捷选项-->
 				<div class="col-md-9 top-item">
 					<ul class="list-inline pull-right">
-						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;推广列表</a></li>
+						<li><a href="orders.html">&nbsp <span class="fa fa-file-text"><b>&nbsp;向好友推广</b></span></a></li>
 						<li class="li-split">|</li>
-						<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;收藏</a></li>
+						<li><a href="favorites.html"><span class="fa fa-heart"></span><b>&nbsp;喜好推广</b></a></li>
 						<li class="li-split">|</li>
 						<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;购物车</a></li>
 						<li class="li-split">|</li>
@@ -95,12 +95,12 @@
 						<div class="panel-heading">
 							<!--主选项：我的订单-->
 							<p class="panel-title">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的分享</a>
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">好友推广</a>
 							</p>
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse in">
 							<div class="panel-body">
-								<div><a href="orders.html"><b>全部分享</b></a></div>
+								<div><a href="orders.html"><b>全部推广</b></a></div>
 								<div><a href="orders.html">删除</a></div>
 <!--								<div><a href="orders.html">待收货</a></div>-->
 <!--								<div><a href="orders.html">待评价</a></div>-->
@@ -133,7 +133,7 @@
 						<table class="orders-table" width="100%">
 							<thead>
 								<tr>
-									<th width="10%">样式</th>
+									<th width="5%">样式</th>
 									<th width="20%">商品</th>
 									<th width="10%">单价</th>
 									<th width="10%">分享者</th>
@@ -203,13 +203,13 @@
 					"success":function(json){
 						for(let i=0; i < json.data.length; i++){
 							let html=
-								 '<tr>'
+									'<tr>'
 									+ '<td><img src="../#{image}/collect.png" class="img-responsive" /></td>'
 									+ '<td>#{title}</td>'
 									+ '<td><span>#{price}</span></td>'
 									+ '<td><span>#{sharer}</span></td>'
 									+ '<td><span>#{sharetime}</span></td>'
-								+ '</tr>';
+									+ '</tr>';
 
 							//replace进行替换
 							html = html.replace(/#{image}/g,json.data[i].image);

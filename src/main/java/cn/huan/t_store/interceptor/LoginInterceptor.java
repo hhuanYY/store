@@ -9,6 +9,7 @@ import cn.huan.t_store.service.impl.LogServiceImpl;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import java.util.Date;
@@ -47,9 +48,17 @@ public class LoginInterceptor implements HandlerInterceptor {
 		Log log = new Log();
 		String username = session.getAttribute("username").toString();
 		String url = request.getHeader("referer");
+		if (StringUtils.isEmpty(url) || url.indexOf("?") == -1) {
+			return;
+		}
+
 		log.setUsername(username);
 		log.setUrl(url);
 		log.setTimes(new Date());
+		int index = url.indexOf("=") + 1;
+		Integer pid = Integer.valueOf(url.substring(index));
+		log.setPid(pid);
+
 		try {
 			if (logServiceImpl == null) {
 				BeanFactory factory = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getServletContext());

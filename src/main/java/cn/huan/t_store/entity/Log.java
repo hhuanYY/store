@@ -13,7 +13,9 @@ public class Log {
     private Integer id;
     private String username;
     private String url;
+    private Integer num;
     private Date times;
+    private Integer pid;
 
     public Log() {
     }
@@ -24,14 +26,33 @@ public class Log {
         this.times = times;
     }
 
+
     @Override
     public String toString() {
         return "Log{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", url='" + url + '\'' +
+                ", num=" + num +
                 ", times=" + times +
+                ", productId=" + pid +
                 '}';
+    }
+
+    public Integer getPid() {
+        return pid;
+    }
+
+    public void setPid(Integer pid) {
+        this.pid = pid;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
     }
 
     public Integer getId() {

@@ -30,6 +30,22 @@
 		SELECT DISTINCT friendname FROM t_friend WHERE uid = #{uid};
 	</select>
 
+
+	<select id="listHotProduct" resultType="cn.huan.t_store.entity.Log">
+		SELECT
+			url, COUNT(*) AS num
+		FROM
+			t_log
+		WHERE
+			times &gt;= #{start} AND times &lt;= #{end}
+		GROUP BY
+			url
+		ORDER BY
+			num DESC
+		LIMIT 0,3
+	</select>
+
+
  </mapper>
 
 

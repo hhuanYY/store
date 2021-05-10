@@ -25,14 +25,26 @@ public class ShareMapperTest {
     private ShareMapper shareMapper ;
 
     @Autowired
-    private ShareService shareService;
-
-    @Autowired
     private FriendMapper friendMapper;
 
     @Autowired
     private LogMapper logMapper;
 
+    @Autowired
+    private ShareService shareService;
+
+
+    @Test
+    public void showHot() {
+        List<Log> logs = shareMapper.listHotProduct("2021-05-03 12:13:43", "2021-05-10 12:13:43");
+        System.err.println(logs);
+    }
+
+    @Test
+    public void listP() {
+        List<Product> products = shareService.listHotProduct();
+        System.err.println(products);
+    }
 
     @Test
     public void insertLog() {

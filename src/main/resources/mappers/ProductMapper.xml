@@ -55,6 +55,21 @@
 			id=#{id} 
 	</select>
 
+
+	<select id="listByids" resultMap="ProductEntity">
+		SELECT
+			p.*, COUNT(url) AS clickNum
+		FROM
+			t_product p LEFT JOIN t_log l ON p.id = l.pid
+		WHERE
+			p.id IN(#{id1},#{id2},#{id3})
+		GROUP BY
+			l.url
+		ORDER BY
+			clickNum DESC
+	</select>
+
+
 	<select id="findLikeList" resultMap="ProductEntity" >
 		SELECT
 		DISTINCT title,image,price

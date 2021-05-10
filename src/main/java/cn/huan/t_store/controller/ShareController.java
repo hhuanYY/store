@@ -1,6 +1,7 @@
 package cn.huan.t_store.controller;
 
 import cn.huan.t_store.entity.Friend;
+import cn.huan.t_store.entity.Product;
 import cn.huan.t_store.entity.ShareVO;
 import cn.huan.t_store.entity.User;
 import cn.huan.t_store.service.ShareService;
@@ -27,6 +28,7 @@ public class ShareController extends BaseController {
 
     /**
      * 新增分享
+     *
      * @param proId    商品id
      * @param username 用户名
      * @param session
@@ -43,6 +45,7 @@ public class ShareController extends BaseController {
 
     /**
      * 展示分享
+     *
      * @param session
      * @return
      */
@@ -56,6 +59,7 @@ public class ShareController extends BaseController {
 
     /**
      * 显示好友用户
+     *
      * @return
      */
     @RequestMapping("showUsername")
@@ -64,4 +68,16 @@ public class ShareController extends BaseController {
         List<Friend> date = shareService.listUser(uid);
         return new JsonResult<>(OK, date);
     }
+
+
+    /**
+     * 热销产品推送
+     * @return
+     */
+    @RequestMapping("showHotProduct")
+    public JsonResult<List<Product>> listProduct() {
+        List<Product> products = shareService.listHotProduct();
+        return new JsonResult<>(OK, products);
+    }
+
 }

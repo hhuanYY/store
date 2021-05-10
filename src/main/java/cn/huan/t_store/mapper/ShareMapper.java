@@ -1,12 +1,8 @@
 package cn.huan.t_store.mapper;
 
-import cn.huan.t_store.entity.Friend;
-import cn.huan.t_store.entity.Share;
-import cn.huan.t_store.entity.ShareVO;
-import cn.huan.t_store.entity.User;
+import cn.huan.t_store.entity.*;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,6 +34,15 @@ public interface ShareMapper {
      * @return 结果集
      */
     List<Friend> listUsername(Integer uid);
+
+
+    /**
+     * 根据访问量以及时间自动查询产品
+     * @return
+     */
+    List<Log> listHotProduct(
+            @Param("start") String start,
+            @Param("end") String end);
 
 
 }

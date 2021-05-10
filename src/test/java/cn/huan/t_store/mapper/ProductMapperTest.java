@@ -25,6 +25,14 @@ public class ProductMapperTest {
     @Autowired
     private BuyNowMapper buyNowMapper;
 
+
+    @Test
+    public void listPro() {
+        List<Product> products = productMapper.listByids(10000001, 10000017, 0);
+        System.err.println(products);
+    }
+
+
     @Test
     public void hotSort() {
         List<Product> hotSort = productMapper.findHotSort();

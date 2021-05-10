@@ -1,15 +1,14 @@
 package cn.huan.t_store.service.impl;
 
-import cn.huan.t_store.entity.Friend;
-import cn.huan.t_store.entity.Share;
-import cn.huan.t_store.entity.ShareVO;
-import cn.huan.t_store.entity.User;
+import cn.huan.t_store.entity.*;
+import cn.huan.t_store.mapper.ProductMapper;
 import cn.huan.t_store.mapper.ShareMapper;
 import cn.huan.t_store.mapper.UserMapper;
 import cn.huan.t_store.service.ShareService;
 import cn.huan.t_store.service.ex.InsertException;
 import cn.huan.t_store.service.ex.UserNotFoundException;
 import cn.huan.t_store.service.ex.UsernameDuplicateException;
+import cn.huan.t_store.util.DateTimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -29,6 +28,8 @@ public class ShareServiceImpl implements ShareService {
     private UserMapper userMapper;
     @Autowired
     private ShareMapper shareMapper;
+    @Autowired
+    private ProductMapper productMapper;
 
     /**
      * 新增分享业务
@@ -89,5 +90,25 @@ public class ShareServiceImpl implements ShareService {
             throw new UserNotFoundException("无好友分享！");
         }
         return list;
+    }
+
+
+    /**
+     * 热销产品  --
+     * @return
+     */
+    @Override
+    public List<Product> listHotProduct() {
+        String lastWeekTime = DateTimeUtil.getLastWeekTime();
+        String currentTime = DateTimeUtil.getStringByDate(new Date());
+        List<Log> logs = shareMapper.listHotProduct(lastWeekTime, currentTime);
+        int index = logs.get(0).getUrl().indexOf("=") + 1;
+
+        Integer id1 = Integer.parseInt(logs.get(0).getUrl().substring(index));
+        Integer id2 = Integer.parseInt(logs.get(1).getUrl().substring(index));
+        Integer id3 = Integer.parseInt(logs.get(2).getUrl().substring(index));
+
+        List<Product> products = productMapper.listByids(id1, id2, id3);
+        return products;
     }
 }
