@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -28,7 +29,7 @@ import cn.huan.t_store.service.UserService;
 import cn.huan.t_store.util.JsonResult;
 
 
-
+@Slf4j
 @RestController
 @RequestMapping("users")  //用于增加一层父级路径
 public class UserController extends BaseController{
@@ -51,9 +52,8 @@ public class UserController extends BaseController{
 		
 	@RequestMapping("reg")
 	public JsonResult<Void> reg(User user) {    //因为不需要返回任何数据，所以写Void
-		System.out.println("UserController.reg()");
-		System.err.println(user);
 		userService.reg(user);
+		log.info("注册成功{}");
 		return new JsonResult<Void>(OK);
 	}
 	
@@ -63,7 +63,9 @@ public class UserController extends BaseController{
 		User data = userService.login(username, password);
 		jsonResult.setState(OK);
 		jsonResult.setData(data);
-		System.err.println("登录成功,user="+ data);
+		log.info("登录成功,user{}"+ data);
+		log.debug("登录成功,user{}"+ data);
+		log.error("登录成功,user{}"+ data);
 		//只有将主要信息放入session中，下次登录时才能够自动识别到登录的用户
 		session.setAttribute("uid", data.getUid());  //后续中会用到 uid 和username
 		session.setAttribute("username", username);

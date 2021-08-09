@@ -1,0 +1,45 @@
+22:03:55.817 [main] INFO  cn.huan.t_store.TStoreApplication - Starting TStoreApplication on DESKTOP-PVGLPV6 with PID 12732 (G:\idea_workplace\t_store\target\classes started by My Computer in G:\idea_workplace\t_store)
+22:03:55.824 [main] INFO  cn.huan.t_store.TStoreApplication - No active profile set, falling back to default profiles: default
+22:03:58.436 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9011 (http)
+22:03:58.459 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9011"]
+22:03:58.475 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:03:58.475 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.34]
+22:03:58.671 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:03:58.671 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2741 ms
+22:04:00.131 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+22:04:00.317 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+22:04:00.527 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+22:04:00.658 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9011"]
+22:04:00.710 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9011 (http) with context path ''
+22:04:00.717 [main] INFO  cn.huan.t_store.TStoreApplication - Started TStoreApplication in 5.987 seconds (JVM running for 7.357)
+22:04:12.259 [http-nio-9011-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:04:12.260 [http-nio-9011-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:04:12.289 [http-nio-9011-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+22:04:16.595 [http-nio-9011-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:04:17.014 [http-nio-9011-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:04:17.160 [http-nio-9011-exec-2] INFO  c.h.t.controller.UserController - 登录成功,user{}User{uid=1, username='root', password='null', salt='null', phone='null', email='null', gender=null, avatar='/upload/2020113012200849167069287200.jpg', isDelete=null}
+22:04:17.162 [http-nio-9011-exec-2] ERROR c.h.t.controller.UserController - 登录成功,user{}User{uid=1, username='root', password='null', salt='null', phone='null', email='null', gender=null, avatar='/upload/2020113012200849167069287200.jpg', isDelete=null}
+22:09:51.852 [main] INFO  cn.huan.t_store.TStoreApplication - Starting TStoreApplication on DESKTOP-PVGLPV6 with PID 15968 (G:\idea_workplace\t_store\target\classes started by My Computer in G:\idea_workplace\t_store)
+22:09:51.858 [main] INFO  cn.huan.t_store.TStoreApplication - No active profile set, falling back to default profiles: default
+22:09:54.674 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9011 (http)
+22:09:54.695 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9011"]
+22:09:54.711 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:09:54.712 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.34]
+22:09:54.919 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:09:54.919 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2964 ms
+22:09:56.210 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+22:09:56.405 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+22:09:56.671 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+22:09:56.771 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9011"]
+22:09:56.810 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9011 (http) with context path ''
+22:09:56.815 [main] INFO  cn.huan.t_store.TStoreApplication - Started TStoreApplication in 5.725 seconds (JVM running for 7.226)
+22:10:20.390 [http-nio-9011-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:10:20.391 [http-nio-9011-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:10:20.425 [http-nio-9011-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 34 ms
+22:10:20.749 [http-nio-9011-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:10:21.110 [http-nio-9011-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:10:38.979 [http-nio-9011-exec-9] INFO  c.h.t.controller.UserController - 注册成功{}
+22:11:34.843 [http-nio-9011-exec-3] INFO  c.h.t.controller.UserController - 登录成功,user{}User{uid=1, username='root', password='null', salt='null', phone='null', email='null', gender=null, avatar='/upload/2020113012200849167069287200.jpg', isDelete=null}
+22:11:34.843 [http-nio-9011-exec-3] ERROR c.h.t.controller.UserController - 登录成功,user{}User{uid=1, username='root', password='null', salt='null', phone='null', email='null', gender=null, avatar='/upload/2020113012200849167069287200.jpg', isDelete=null}
+22:12:27.953 [http-nio-9011-exec-7] INFO  c.h.t.controller.UserController - 登录成功,user{}User{uid=1, username='root', password='null', salt='null', phone='null', email='null', gender=null, avatar='/upload/2020113012200849167069287200.jpg', isDelete=null}
+22:12:27.953 [http-nio-9011-exec-7] ERROR c.h.t.controller.UserController - 登录成功,user{}User{uid=1, username='root', password='null', salt='null', phone='null', email='null', gender=null, avatar='/upload/2020113012200849167069287200.jpg', isDelete=null}

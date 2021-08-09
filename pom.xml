@@ -20,7 +20,15 @@
 	</properties>
 
 	<dependencies>
-	
+
+		<!-- lomback日志 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- 消息摘要算法依赖 --> 
 		<dependency>
 			<groupId>commons-codec</groupId>
